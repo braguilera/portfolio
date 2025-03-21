@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@layer components {
+    .gradient-text {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    
+    .font-oswald {
+      font-family: 'Oswald', sans-serif;
+    }
+  }
+
+  
