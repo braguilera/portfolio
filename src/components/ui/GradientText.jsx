@@ -36,7 +36,7 @@ const GradientText = ({ text = "FRONTEND" }) => {
   }, []);
   
   return (
-    <div className="flex justify-center items-center py-16 bg-gray-50 overflow-hidden w-full">
+    <div className="flex justify-center items-center bg-gray-50 overflow-hidden w-full">
       <div className="relative">
         <h1 
           className="text-8xl font-black tracking-wide relative z-10"
@@ -51,27 +51,6 @@ const GradientText = ({ text = "FRONTEND" }) => {
           {text}
         </h1>
         
-        <div 
-          ref={topCircleRef}
-          className="absolute -right-4 -top-4 w-24 h-24 rounded-full opacity-30"
-          style={{ 
-            background: 'linear-gradient(135deg, #a78bfa 0%, #ec4899 100%)',
-            filter: 'blur(25px)',
-            transition: 'transform 0.05s ease-out',
-          }}
-        />
-        
-        <div 
-          ref={bottomCircleRef}
-          className="absolute -left-4 -bottom-4 w-24 h-24 rounded-full opacity-30"
-          style={{ 
-            background: 'linear-gradient(315deg, #a78bfa 0%, #ec4899 100%)',
-            filter: 'blur(25px)',
-            transition: 'transform 0.05s ease-out',
-          }}
-        />
-        
-
         <div 
           className="absolute left-1/2 top-1/2 w-32 h-32 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-10"
           style={{ 
