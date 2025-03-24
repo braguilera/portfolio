@@ -9,7 +9,7 @@ import Contact from './components/sections/Contact'
 
 function App() {
   return (
-    <main className='bg-zinc-50 w-full h-auto relative'>
+    <main className='bg-zinc-50 w-full h-auto relative overflow-x-hidden'>
       <Nav/>
       <Hero/>
       <Experience/>
