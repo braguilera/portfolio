@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CardExperience from '../ui/CardExperience';
+import GradientText from '../ui/GradientText';
 
 const TimelinePoint = ({ isRight, isInView }) => {
   return (
@@ -153,7 +154,7 @@ const Experience = () => {
   ];
 
   return (
-    <section className='w-full min-h-screen py-24 flex flex-col items-center justify-start relative bg-purple-50/90'>
+    <section className='w-full min-h-screen py-24 flex flex-col items-center justify-start relative bg-violet-100'>
       {/* Título */}
       <motion.h2 
         className="text-4xl font-bold text-slate-800 mb-16 relative"
