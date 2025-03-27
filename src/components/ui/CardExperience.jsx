@@ -1,16 +1,7 @@
 import React from 'react';
 import { Calendar, Building2, Code2, Github, ExternalLink, ChevronRight } from 'lucide-react';
 
-const CardExperience = ({ 
-  title, 
-  company, 
-  date, 
-  description, 
-  technologies = [], 
-  githubUrl,
-  demoUrl, 
-  backgroundImage 
-}) => {
+const CardExperience = ({ title, company, date, description, technologies = [], githubUrl,demoUrl, backgroundImage}) => {
   return (
     <article className="relative overflow-hidden rounded-xl shadow-lg border border-slate-200 transition-all duration-300 hover:shadow-xl group">
       {/* Imagen de fondo con overlay */}
