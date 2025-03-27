@@ -1,10 +1,35 @@
 import React from 'react';
-import { Calendar, Building2, Code2, Github, ExternalLink, ChevronRight } from 'lucide-react';
+import { Calendar, Building2, Github, ExternalLink } from 'lucide-react';
 
-const CardExperience = ({ title, company, date, description, technologies = [], githubUrl,demoUrl, backgroundImage}) => {
+const CardExperience = ({ title, company, date, description, technologies = [], githubUrl, demoUrl, backgroundImage }) => {
+  const getTechIcon = (techName) => {
+    const iconMap = {
+      React: <i className='bx bxl-react text-purple-600 text-lg'></i>,
+      NextJS: <i className='bx bx-code-alt text-purple-600 text-lg'></i>,
+      TypeScript: <i className='bx bxl-typescript text-purple-600 text-lg'></i>,
+      'Tailwind CSS': <i className='bx bx-palette text-purple-600 text-lg'></i>,
+      GraphQL: <i className='bx bx-data text-purple-600 text-lg'></i>,
+      'Vue.js': <i className='bx bxl-vuejs text-purple-600 text-lg'></i>,
+      'Node.js': <i className='bx bxl-nodejs text-purple-600 text-lg'></i>,
+      Express: <i className='bx bx-network-chart text-purple-600 text-lg'></i>,
+      MongoDB: <i className='bx bxl-mongodb text-purple-600 text-lg'></i>,
+      Docker: <i className='bx bxl-docker text-purple-600 text-lg'></i>,
+      JavaScript: <i className='bx bxl-javascript text-purple-600 text-lg'></i>,
+      SASS: <i className='bx bxl-sass text-purple-600 text-lg'></i>,
+      Webpack: <i className='bx bx-package text-purple-600 text-lg'></i>,
+      jQuery: <i className='bx bx-code-curly text-purple-600 text-lg'></i>,
+      WordPress: <i className='bx bxl-wordpress text-purple-600 text-lg'></i>,
+      HTML: <i className='bx bxl-html5 text-purple-600 text-lg'></i>,
+      CSS: <i className='bx bxl-css3 text-purple-600 text-lg'></i>,
+      PHP: <i className='bx bxl-php text-purple-600 text-lg'></i>,
+      MySQL: <i className='bx bx-data text-purple-600 text-lg'></i>
+    };
+
+    return iconMap[techName] || <i className='bx bx-code text-purple-600 text-lg'></i>;
+  };
+
   return (
-    <article className="relative overflow-hidden rounded-xl shadow-lg border border-slate-200 transition-all duration-300 hover:shadow-xl group">
-      {/* Imagen de fondo con overlay */}
+    <article className="relative overflow-hidden rounded-xl shadow-lg border border-purple-100 transition-all duration-300 group bg-white">
       <div className="absolute inset-0 z-0">
         {backgroundImage && (
           <div className="w-full h-full">
@@ -15,41 +40,39 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
             />
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-800/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-50/80 to-white/70" />
       </div>
 
-      {/* Contenido principal */}
       <div className="relative z-10 p-6 flex flex-col h-full">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
           <div>
-            <h3 className="text-xl font-bold text-white mb-1">{title}</h3>
-            <div className="flex items-center gap-2 text-slate-300 mb-2">
-              <Building2 size={16} className="text-purple-400" />
+            <h3 className="text-xl font-bold text-slate-800 mb-1">{title}</h3>
+            <div className="flex items-center gap-2 text-slate-600 mb-2">
+              <Building2 size={16} className="text-purple-500" />
               <span className="font-medium">{company}</span>
             </div>
           </div>
-          <div className="flex items-center gap-2 bg-slate-800/60 px-3 py-1 rounded-full self-start">
-            <Calendar size={14} className="text-purple-400" />
-            <span className="text-sm font-medium text-slate-200">{date}</span>
+          <div className="flex items-center gap-2 bg-purple-100/60 px-3 py-1 rounded-full self-start">
+            <Calendar size={14} className="text-purple-500" />
+            <span className="text-sm font-medium text-slate-600">{date}</span>
           </div>
         </div>
 
-        {/* Descripción */}
-        <p className="text-slate-300 mb-6 line-clamp-3">{description}</p>
+        <p className="text-slate-600 mb-6 line-clamp-3">{description}</p>
 
-        {/* Tecnologías */}
         {technologies.length > 0 && (
           <div className="mb-6">
             <div className="flex items-center gap-2 mb-2">
-              <Code2 size={16} className="text-purple-400" />
-              <span className="text-sm font-medium text-slate-200">Tecnologías</span>
+              <i className='bx bx-code-alt text-purple-500 text-lg'></i>
+              <span className="text-sm font-medium text-slate-600">Tecnologías</span>
             </div>
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
                 <span 
                   key={index} 
-                  className="text-xs bg-slate-700/60 text-slate-200 px-3 py-1 rounded-full border border-slate-600"
+                  className="text-xs bg-purple-100 text-purple-800 px-3 py-1 rounded-full border border-purple-200 flex items-center gap-1"
                 >
+                  {getTechIcon(tech)}
                   {tech}
                 </span>
               ))}
@@ -57,16 +80,15 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
           </div>
         )}
 
-        {/* Enlaces */}
         <div className="mt-auto flex gap-3">
           {githubUrl && (
             <a 
               href={githubUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-slate-300 hover:text-purple-400 transition-colors"
+              className="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-600 transition-colors"
             >
-              <Github size={16} />
+              <Github size={16} className="text-purple-500" />
               <span>GitHub</span>
             </a>
           )}
@@ -75,17 +97,12 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
               href={demoUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-slate-300 hover:text-purple-400 transition-colors"
+              className="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-600 transition-colors"
             >
-              <ExternalLink size={16} />
+              <ExternalLink size={16} className="text-purple-500" />
               <span>Demo</span>
             </a>
           )}
-          
-          <button className="ml-auto flex items-center gap-1 bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded-lg text-sm transition-colors group-hover:bg-purple-500">
-            <span>Detalles</span>
-            <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </button>
         </div>
       </div>
     </article>

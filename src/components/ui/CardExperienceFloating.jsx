@@ -9,10 +9,8 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
   const opacity = useMotionValue(0.7)
 
   useEffect(() => {
-    // Calculamos el retraso basado en el índice para la animación en cascada
     const delay = index * 0.1
 
-    // Animación de posición
     const animations = [
       animate(x, isExpanded ? position.expandedX : position.initialX, {
         duration: 0.5,
@@ -33,24 +31,22 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
     return () => animations.forEach((animation) => animation.stop())
   }, [isExpanded, position, index])
 
-  // Función para obtener el icono correspondiente a cada tecnología
   const getTechIcon = (techName) => {
     const iconMap = {
-      React: <i className='bx bxl-react text-purple-900 text-lg'></i>,
-      Tailwind: <i className='bx bxl-tailwind-css text-purple-900 text-lg' ></i>,
-      "Node.js": <i className='bx bx-server text-purple-900 text-lg'></i>,
-      Express: <i className='bx bx-network-chart text-purple-900 text-lg'></i>,
-      MongoDB: <i className='bx bx-data text-purple-900 text-lg'></i>,
-      "React Native": <i className='bx bx-mobile-alt text-purple-900 text-lg'></i>,
-      Firebase: <i className='bx bx-cloud text-purple-900 text-lg'></i>,
-      GraphQL: <i className='bx bx-shape-circle text-purple-900 text-lg'></i>,
-      TypeScript: <i className='bx bx-code-curly text-purple-900 text-lg'></i>
+      React: <i className='bx bxl-react text-purple-500 text-lg'></i>,
+      Tailwind: <i className='bx bxl-tailwind-css text-purple-500 text-lg' ></i>,
+      "Node.js": <i className='bx bx-server text-purple-500 text-lg'></i>,
+      Express: <i className='bx bx-network-chart text-purple-500 text-lg'></i>,
+      MongoDB: <i className='bx bx-data text-purple-500 text-lg'></i>,
+      "React Native": <i className='bx bx-mobile-alt text-purple-500 text-lg'></i>,
+      Firebase: <i className='bx bx-cloud text-purple-500 text-lg'></i>,
+      GraphQL: <i className='bx bx-shape-circle text-purple-500 text-lg'></i>,
+      TypeScript: <i className='bx bx-code-curly text-purple-500 text-lg'></i>
     }
 
     return iconMap[techName] || <i className='bx bx-code text-purple-100 text-lg'></i>
   }
 
-  // Determinar la rotación basada en la posición
   const getCardStyle = () => {
     if (position.position.includes("Left")) {
       return "transform -rotate-12 perspective-200"
@@ -117,7 +113,6 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
         </div>
       </motion.div>
 
-      {/* Iconos de Skills */}
       {isExpanded && (
         <motion.div
           className="absolute -top-6 transform -translate-y-1/2 flex gap-2"
@@ -131,7 +126,7 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
           {project.technologies.slice(0, 3).map((tech, i) => (
             <motion.div
               key={i}
-              className="w-8 h-8 rounded-full bg-purple-300 flex items-center justify-center text-white"
+              className="w-8 h-8 rounded-full bg-purple-200 flex items-center justify-center text-white"
               initial={{ scale: 0 }}
               animate={{
                 scale: 1,

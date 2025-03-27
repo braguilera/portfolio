@@ -11,7 +11,7 @@ const Hero = () => {
   const projectsData = [
     {
       title: "Frontend Project",
-      description: " ResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsive web application",
+      description: " web application  web application  web application  web application  web application",
       technologies: [
         { name: "React", icon: "react-icon" },
         { name: "Tailwind", icon: "tailwind-icon" },
@@ -49,7 +49,6 @@ const Hero = () => {
     },
   ]
 
-  // Definir posiciones para las tarjetas con mayor inclinación hacia la imagen
   const cardPositions = [
     {
       initialX: -100,
@@ -85,14 +84,14 @@ const Hero = () => {
     <div className="h-[90vh] w-screen flex justify-center relative px-8 py-4 text-slate-700">
       <GeometricShapes />
 
-      <div className="w-6xl my-12 flex flex-col items-center">
+      <div className="w-6xl my-12 flex flex-col">
         <div className="mb-8 flex items-center space-x-2">
           <div className="h-px w-12 bg-purple-800/50"></div>
           <span className="text-sm font-light tracking-wider">2021</span>
         </div>
 
         <motion.h1
-          className="w-full text-center text-5xl font-bold mb-6"
+          className="w-full text-5xl font-bold mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -100,7 +99,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.h2
-          className="text-8xl text-center md:text-7xl font-bold mb-8 text-purple-900"
+          className="text-8xl md:text-7xl font-bold mb-8 text-purple-900"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -112,7 +111,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          A wonderful serenity has taken possession of my entire.
+          Especializado en crear aplicaciones web modernas y soluciones digitales eficientes.
         </motion.p>
 
         <motion.button
@@ -130,7 +129,6 @@ const Hero = () => {
           onHoverStart={() => setIsHovered(true)}
           onHoverEnd={() => setIsHovered(false)}
         >
-          {/* Contenedor para las tarjetas y la imagen */}
           <div className="relative flex items-center justify-center">
             {projectsData.slice(0, 4).map((project, index) => (
               <CardExperienceFloating
@@ -142,7 +140,6 @@ const Hero = () => {
               />
             ))}
 
-            {/* Imagen de perfil encima de las tarjetas */}
             <motion.div
               className="relative z-10 w-[300px] h-[400px] flex items-center justify-center"
               animate={{
@@ -157,7 +154,6 @@ const Hero = () => {
                 className="w-full h-full object-cover object-center"
               />
 
-              {/* Texto flotante que sale desde detrás de la imagen */}
               <motion.div
                 className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-40 w-full"
                 initial={{ y: 100, opacity: 0 }}

@@ -7,7 +7,6 @@ import GradientText from '../ui/GradientText';
 const TimelinePoint = ({ isRight, isInView }) => {
   return (
     <div className="relative z-10 w-full h-6 flex items-center justify-center">
-      {/* Línea horizontal */}
       <motion.div 
         className={`absolute h-0.5 bg-purple-600 ${isRight ? 'left-1/2' : 'right-1/2'}`}
         style={{
@@ -24,7 +23,6 @@ const TimelinePoint = ({ isRight, isInView }) => {
         } : { scaleX: 0 }}
       />
       
-      {/* Punto central absoluto */}
       <motion.div 
         className="w-6 h-6 rounded-full bg-white border-2 border-purple-600 z-20 flex items-center justify-center absolute"
         style={{
@@ -70,15 +68,12 @@ const TimelineItem = ({ data, index }) => {
 
   return (
     <div ref={ref} className="relative w-full h-56 flex items-center justify-center my-12">
-      {/* Contenedor central absoluto */}
       <div className="absolute left-1/2 -translate-x-1/2 w-full">
         <TimelinePoint isRight={isRight} isInView={inView} />
       </div>
 
-      {/* Cards laterales */}
       <div className="container mx-auto relative">
         <div className="flex justify-between">
-          {/* Card izquierda */}
           {!isRight && (
             <motion.div 
               className="w-[45%]"
@@ -90,10 +85,8 @@ const TimelineItem = ({ data, index }) => {
             </motion.div>
           )}
 
-          {/* Espacio central */}
           <div className="w-[10%]" />
 
-          {/* Card derecha */}
           {isRight && (
             <motion.div 
               className="w-[45%]"
@@ -113,7 +106,6 @@ const TimelineItem = ({ data, index }) => {
 const Experience = () => {
   const { scrollYProgress } = useScroll();
 
-  // Datos de ejemplo para las experiencias
   const experiences = [
     {
       title: "Senior Frontend Developer",
@@ -155,7 +147,6 @@ const Experience = () => {
 
   return (
     <section className='w-full min-h-screen py-24 flex flex-col items-center justify-start relative bg-violet-100'>
-      {/* Título */}
       <motion.h2 
         className="text-4xl font-bold text-slate-800 mb-16 relative"
         initial={{ opacity: 0, y: -20 }}
@@ -171,9 +162,7 @@ const Experience = () => {
         />
       </motion.h2>
 
-      {/* Contenedor de timeline */}
       <div className="container mx-auto relative px-4">
-        {/* Línea vertical corregida */}
         <motion.div 
           className="absolute left-1/2 h-full w-0.5 bg-purple-300 origin-top z-0"
           style={{ 
@@ -182,7 +171,6 @@ const Experience = () => {
           }}
         />
         
-        {/* Items */}
         <div className="relative z-10">
           {experiences.map((exp, index) => (
             <TimelineItem 
