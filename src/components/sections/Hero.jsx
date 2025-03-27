@@ -11,7 +11,7 @@ const Hero = () => {
   const projectsData = [
     {
       title: "Frontend Project",
-      description: "Responsive web application",
+      description: " ResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsiveResponsive web application",
       technologies: [
         { name: "React", icon: "react-icon" },
         { name: "Tailwind", icon: "tailwind-icon" },
@@ -66,14 +66,14 @@ const Hero = () => {
       position: "topRight",
     },
     {
-      initialX: -120,
+      initialX: -160,
       initialY: 10,
       expandedX: -300,
       expandedY: 10,
       position: "bottomLeft",
     },
     {
-      initialX: 120,
+      initialX: 160,
       initialY: 10,
       expandedX: 300,
       expandedY: 10,
@@ -85,19 +85,18 @@ const Hero = () => {
     <div className="h-[90vh] w-screen flex justify-center relative px-8 py-4 text-slate-700">
       <GeometricShapes />
 
-      <div className="w-4xl mb-12 flex flex-col">
+      <div className="w-6xl my-12 flex flex-col items-center">
         <div className="mb-8 flex items-center space-x-2">
           <div className="h-px w-12 bg-purple-800/50"></div>
           <span className="text-sm font-light tracking-wider">2021</span>
         </div>
 
         <motion.h1
-          className="text-4xl text-center md:text-5xl font-bold mb-6"
+          className="w-full text-center text-5xl font-bold mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Soy <span className="text-purple-900">Braian Alejandro Aguilera</span>,<br />
-          <span className="text-3xl md:text-4xl">un fullstack enfocado en el desarrollo</span>
+          Soy <span className="text-purple-900">Braian Alejandro Aguilera</span>,un fullstack enfocado en el desarrollo
         </motion.h1>
 
         <motion.h2
@@ -145,7 +144,7 @@ const Hero = () => {
 
             {/* Imagen de perfil encima de las tarjetas */}
             <motion.div
-              className="relative z-30 w-[300px] h-[400px] flex items-center justify-center"
+              className="relative z-10 w-[300px] h-[400px] flex items-center justify-center"
               animate={{
                 scale: isHovered ? 1.1 : 1,
                 transition: { type: "spring", stiffness: 300 },

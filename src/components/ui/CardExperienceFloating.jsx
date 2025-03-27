@@ -2,8 +2,6 @@
 
 import { useEffect } from "react"
 import { motion, useMotionValue, animate } from "framer-motion"
-import { bxCode, bxGlobe, bxServer, bxData, bxMobile, bxLayer, bxGitRepoForked } from "boxicons"
-import { Github, ExternalLink, Code2, Server, Database, Smartphone, Layers, Globe } from "lucide-react"
 
 const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
   const x = useMotionValue(position.initialX)
@@ -35,31 +33,18 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
     return () => animations.forEach((animation) => animation.stop())
   }, [isExpanded, position, index])
 
-  // Variantes para la animación de las skills en cascada
-  const skillVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.1,
-        duration: 0.3,
-      },
-    }),
-  }
-
   // Función para obtener el icono correspondiente a cada tecnología
   const getTechIcon = (techName) => {
     const iconMap = {
-      React: <i className='bx bxl-react text-purple-100 text-lg'></i>,
-      Tailwind: <i className='bx bxl-tailwind-css text-purple-100 text-lg' ></i>,
-      "Node.js": <i className='bx bx-server text-purple-100 text-lg'></i>,
-      Express: <i className='bx bx-network-chart text-purple-100 text-lg'></i>,
-      MongoDB: <i className='bx bx-data text-purple-100 text-lg'></i>,
-      "React Native": <i className='bx bx-mobile-alt text-purple-100 text-lg'></i>,
-      Firebase: <i className='bx bx-cloud text-purple-100 text-lg'></i>,
-      GraphQL: <i className='bx bx-shape-circle text-purple-100 text-lg'></i>,
-      TypeScript: <i className='bx bx-code-curly text-purple-100 text-lg'></i>
+      React: <i className='bx bxl-react text-purple-900 text-lg'></i>,
+      Tailwind: <i className='bx bxl-tailwind-css text-purple-900 text-lg' ></i>,
+      "Node.js": <i className='bx bx-server text-purple-900 text-lg'></i>,
+      Express: <i className='bx bx-network-chart text-purple-900 text-lg'></i>,
+      MongoDB: <i className='bx bx-data text-purple-900 text-lg'></i>,
+      "React Native": <i className='bx bx-mobile-alt text-purple-900 text-lg'></i>,
+      Firebase: <i className='bx bx-cloud text-purple-900 text-lg'></i>,
+      GraphQL: <i className='bx bx-shape-circle text-purple-900 text-lg'></i>,
+      TypeScript: <i className='bx bx-code-curly text-purple-900 text-lg'></i>
     }
 
     return iconMap[techName] || <i className='bx bx-code text-purple-100 text-lg'></i>
@@ -80,7 +65,7 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
         x,
         y,
         opacity,
-        zIndex: isExpanded ? 10 : 0,
+        zIndex: isExpanded ? 20 : 0,
         position: "absolute",
       }}
       className={`w-64 bg-white rounded-2xl shadow-xl p-4 border-2 border-purple-100 ${getCardStyle()}`}
@@ -93,16 +78,16 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
       <h3 className="text-lg font-bold text-purple-800 truncate">{project.title}</h3>
 
       <motion.div
-        className="overflow-hidden"
+        className="overflow-hidden flex flex-col justify-between"
         initial={{ height: 0 }}
         animate={{
-          height: isExpanded ? "auto" : 0,
+          height: isExpanded ? 80 : 0,
           transition: { delay: index * 0.05 },
         }}
       >
-        <p className="text-sm text-purple-600 mt-2">{project.description}</p>
+        <p className="text-sm text-purple-600 line-clamp-2">{project.description}</p>
 
-        <div className="flex gap-3">
+        <div className="flex gap-2">
           {project.githubLink && (
             <motion.a
               href={project.githubLink}
@@ -135,7 +120,7 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
       {/* Iconos de Skills */}
       {isExpanded && (
         <motion.div
-          className="absolute -right-10 top-1/2 transform -translate-y-1/2 flex flex-col gap-2"
+          className="absolute -top-6 transform -translate-y-1/2 flex gap-2"
           initial={{ opacity: 0, x: -10 }}
           animate={{
             opacity: 1,
@@ -146,7 +131,7 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
           {project.technologies.slice(0, 3).map((tech, i) => (
             <motion.div
               key={i}
-              className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white"
+              className="w-8 h-8 rounded-full bg-purple-300 flex items-center justify-center text-white"
               initial={{ scale: 0 }}
               animate={{
                 scale: 1,

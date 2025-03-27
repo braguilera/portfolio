@@ -149,7 +149,6 @@ export default function RetronBackground({ children }) {
           ))}
         </div>
 
-        {/* Logo RETRON grande y desvanecido en el fondo */}
         <div className="absolute inset-0 flex justify-center opacity-[0.03]">
           <div className="text-[20vw] font-bold text-purple-800">FRONTEND</div>
         </div>
