@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import { motion, useMotionValue, animate } from "framer-motion"
+import { bxCode, bxGlobe, bxServer, bxData, bxMobile, bxLayer, bxGitRepoForked } from "boxicons"
 import { Github, ExternalLink, Code2, Server, Database, Smartphone, Layers, Globe } from "lucide-react"
 
 const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
@@ -50,24 +51,26 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
   // Función para obtener el icono correspondiente a cada tecnología
   const getTechIcon = (techName) => {
     const iconMap = {
-      React: <Code2 size={16} />,
-      Tailwind: <Globe size={16} />,
-      "Node.js": <Server size={16} />,
-      Express: <Server size={16} />,
-      MongoDB: <Database size={16} />,
-      "React Native": <Smartphone size={16} />,
-      Firebase: <Layers size={16} />,
+      React: <i className='bx bxl-react text-purple-100 text-lg'></i>,
+      Tailwind: <i className='bx bxl-tailwind-css text-purple-100 text-lg' ></i>,
+      "Node.js": <i className='bx bx-server text-purple-100 text-lg'></i>,
+      Express: <i className='bx bx-network-chart text-purple-100 text-lg'></i>,
+      MongoDB: <i className='bx bx-data text-purple-100 text-lg'></i>,
+      "React Native": <i className='bx bx-mobile-alt text-purple-100 text-lg'></i>,
+      Firebase: <i className='bx bx-cloud text-purple-100 text-lg'></i>,
+      GraphQL: <i className='bx bx-shape-circle text-purple-100 text-lg'></i>,
+      TypeScript: <i className='bx bx-code-curly text-purple-100 text-lg'></i>
     }
 
-    return iconMap[techName] || <Code2 size={16} />
+    return iconMap[techName] || <i className='bx bx-code text-purple-100 text-lg'></i>
   }
 
   // Determinar la rotación basada en la posición
   const getCardStyle = () => {
     if (position.position.includes("Left")) {
-      return "transform -rotate-12 perspective-500"
+      return "transform -rotate-12 perspective-200"
     } else {
-      return "transform rotate-12 perspective-500"
+      return "transform rotate-12 perspective-200"
     }
   }
 
@@ -99,23 +102,7 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
       >
         <p className="text-sm text-purple-600 mt-2">{project.description}</p>
 
-        <div className="flex flex-wrap gap-2 my-3">
-          {project.technologies.map((tech, i) => (
-            <motion.span
-              key={i}
-              custom={i}
-              variants={skillVariants}
-              initial="hidden"
-              animate={isExpanded ? "visible" : "hidden"}
-              className="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full flex items-center gap-1"
-            >
-              {getTechIcon(tech.name)}
-              {tech.name}
-            </motion.span>
-          ))}
-        </div>
-
-        <div className="flex gap-3 justify-end">
+        <div className="flex gap-3">
           {project.githubLink && (
             <motion.a
               href={project.githubLink}
@@ -126,7 +113,7 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
                 transition: { delay: 0.3 + index * 0.1 },
               }}
             >
-              <Github className="text-purple-600" size={20} />
+              <i className='bx bxl-github text-purple-600 text-xl'></i>
             </motion.a>
           )}
           {project.websiteLink && (
@@ -139,7 +126,7 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
                 transition: { delay: 0.4 + index * 0.1 },
               }}
             >
-              <ExternalLink className="text-purple-600" size={20} />
+              <i className='bx bx-link-external text-purple-600 text-xl'></i>
             </motion.a>
           )}
         </div>

@@ -52,31 +52,31 @@ const Hero = () => {
   // Definir posiciones para las tarjetas con mayor inclinación hacia la imagen
   const cardPositions = [
     {
-      initialX: -120,
-      initialY: -120,
+      initialX: -100,
+      initialY: -200,
       expandedX: -200,
       expandedY: -180,
       position: "topLeft",
     },
     {
-      initialX: 120,
-      initialY: -120,
+      initialX: 100,
+      initialY: -200,
       expandedX: 200,
       expandedY: -180,
       position: "topRight",
     },
     {
       initialX: -120,
-      initialY: 120,
-      expandedX: -200,
-      expandedY: 180,
+      initialY: 10,
+      expandedX: -300,
+      expandedY: 10,
       position: "bottomLeft",
     },
     {
       initialX: 120,
-      initialY: 120,
-      expandedX: 200,
-      expandedY: 180,
+      initialY: 10,
+      expandedX: 300,
+      expandedY: 10,
       position: "bottomRight",
     },
   ]
@@ -125,7 +125,7 @@ const Hero = () => {
         </motion.button>
       </div>
 
-      <div className="flex-1 absolute -bottom-10 z-10 flex items-center justify-center h-96">
+      <div className="flex-1 absolute -bottom-10 right-80 z-10 flex items-center justify-center h-96">
         <motion.div
           className="relative cursor-pointer"
           onHoverStart={() => setIsHovered(true)}
@@ -133,7 +133,6 @@ const Hero = () => {
         >
           {/* Contenedor para las tarjetas y la imagen */}
           <div className="relative flex items-center justify-center">
-            {/* Tarjetas posicionadas alrededor de la imagen */}
             {projectsData.slice(0, 4).map((project, index) => (
               <CardExperienceFloating
                 key={index}
@@ -152,8 +151,6 @@ const Hero = () => {
                 transition: { type: "spring", stiffness: 300 },
               }}
             >
-              {/* Borde azul como en la imagen de referencia */}
-              <div className="absolute w-full h-full transform rotate-3"></div>
 
               <img
                 src={BraianImg}
@@ -166,7 +163,7 @@ const Hero = () => {
                 className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-40 w-full"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{
-                  y: isHovered ? -30 : 100,
+                  y: isHovered ? -10 : 100,
                   opacity: isHovered ? 1 : 0,
                   transition: {
                     type: "spring",
@@ -175,7 +172,7 @@ const Hero = () => {
                   },
                 }}
               >
-                <div className="bg-gradient-to-r from-purple-600/90 to-indigo-600/90 text-white px-6 py-3 rounded-full backdrop-blur-sm shadow-lg text-center font-medium">
+                <div className="text-purple-900 text-center text-2xl font-bold">
                   Descubre mis proyectos
                 </div>
               </motion.div>

@@ -7,6 +7,7 @@ import Skills from './components/sections/Skills'
 import About from './components/sections/About'
 import Contact from './components/sections/Contact'
 import RetronBackground from './components/ui/RetronBackground'
+import "boxicons/css/boxicons.min.css"
 
 function App() {
   return (
