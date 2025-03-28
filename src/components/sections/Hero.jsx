@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react"
 import GeometricShapes from "../ui/GeometricShapes"
 import CardExperienceFloating from "../ui/CardExperienceFloating"
 import BraianImg from "../../assets/images/Braian.png"
+import ButtonSocial from "../ui/ButtonSocial"
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false)
@@ -99,7 +100,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.h2
-          className="text-8xl md:text-7xl font-bold mb-8 text-purple-900"
+          className="text-9xl font-bold mb-8 text-purple-900"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -175,6 +176,8 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
+
+      <ButtonSocial></ButtonSocial>
     </div>
   )
 }
