@@ -3,14 +3,14 @@ import { gsap } from 'gsap';
 
 function FlowingMenu({ items = [], onSelect }) {
   return (
-    <div className="w-full h-full overflow-hidden">
-      <nav className="flex flex-col h-full m-0 p-0">
+    <div className="w-full h-full overflow-y-auto custom-scrollbar">
+      <nav className="flex flex-col h-full m-0 p-0 gap-px">
         {items.map((item, idx) => (
           <MenuItem 
             key={idx} 
-            text={item.text}  // Pasar props explícitamente
+            text={item.text}
             image={item.image}
-            onClick={() => onSelect(item.text)} // Pasar onClick
+            onClick={() => onSelect(item.text)}
           />
         ))}
       </nav>
@@ -64,28 +64,33 @@ function MenuItem({ text, image, onClick }) { // Añadir onClick aquí
 
   const repeatedMarqueeContent = Array.from({ length: 4 }).map((_, idx) => (
     <React.Fragment key={idx}>
-      <span className="text-[#060606] uppercase font-normal text-[4vh] leading-[1.2] p-[1vh_1vw_0]">
+      <span className="text-purple-900 uppercase font-semibold text-xl lg:text-2xl leading-tight px-4">
         {text}
       </span>
       <div
-        className="w-[200px] h-[7vh] my-[2em] mx-[2vw] p-[1em_0] rounded-[50px] bg-cover bg-center"
+        className="w-32 h-20 lg:w-40 lg:h-24 my-2 mx-4 rounded-xl bg-cover bg-center shadow-lg border border-purple-100"
         style={{ backgroundImage: `url(${image})` }}
       />
     </React.Fragment>
   ));
 
   return (
-    <div className="flex-1 relative overflow-hidden text-center shadow-[0_-1px_0_0_#fff]" ref={itemRef}>
+    <div 
+      className="group relative h-24 lg:h-28 overflow-hidden text-center bg-white/5 hover:bg-purple-50 transition-colors"
+      ref={itemRef}
+    >
       <p
-        className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline font-semibold text-white text-[4vh] hover:text-[#060606] focus:text-white focus-visible:text-[#060606]"
+        className="flex items-center justify-center h-full relative cursor-pointer uppercase font-bold text-purple-800 text-lg lg:text-xl tracking-wide hover:text-purple-900 transition-colors px-4"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onClick={onClick} // Añadir este onClick
+        onClick={onClick}
       >
         {text}
+        <span className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent group-hover:via-purple-300 transition-all" />
       </p>
+      
       <div
-        className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none bg-white translate-y-[101%]"
+        className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none bg-gradient-to-b from-purple-50 to-white translate-y-[101%]"
         ref={marqueeRef}
       >
         <div className="h-full w-[200%] flex" ref={marqueeInnerRef}>
