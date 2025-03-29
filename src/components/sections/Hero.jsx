@@ -5,6 +5,7 @@ import GeometricShapes from "../ui/GeometricShapes"
 import CardExperienceFloating from "../ui/CardExperienceFloating"
 import BraianImg from "../../assets/images/Braian.png"
 import ButtonSocial from "../ui/ButtonSocial"
+import RotatingText from "../ui/RotatingText"
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false)
@@ -85,27 +86,35 @@ const Hero = () => {
     <div className="h-[90vh] w-screen flex justify-center relative px-8 py-4 text-slate-700">
       <GeometricShapes />
 
-      <div className="w-6xl my-12 flex flex-col">
+      <div className="w-7xl my-12 flex flex-col">
         <div className="mb-8 flex items-center space-x-2">
           <div className="h-px w-12 bg-purple-800/50"></div>
-          <span className="text-sm font-light tracking-wider">2021</span>
+          <span className="text-2xl font-light tracking-wider">Braian Alejandro Aguilera</span>
         </div>
 
-        <motion.h1
-          className="w-full text-5xl font-bold mb-6"
+        <motion.h2
+          className="w-full text-6xl font-bold mb-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Soy <span className="text-purple-900">Braian Alejandro Aguilera</span>,un fullstack enfocado en el desarrollo
-        </motion.h1>
-
-        <motion.h2
-          className="text-9xl font-bold mb-8 text-purple-900"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          FRONTEND
+          Desarrollador <span className="text-purple-800">Front-End</span> dedicado a la
         </motion.h2>
+
+        <article className="w-fit flex text-center items-center gap-4 text-6xl font-bold">
+          <h1>construcción de </h1>
+          <RotatingText
+            texts={['interfaces modernas', 'aplicaciones interactivas', 'soluciones digitales']}
+            mainClassName="px-2 sm:px-2 md:px-3 bg-purple-800 text-purple-100 overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg"
+            staggerFrom={"last"}
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-120%" }}
+            staggerDuration={0.025}
+            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            rotationInterval={3000}
+          />
+        </article>
 
         <motion.p
           className="mb-8 text-lg font-light leading-relaxed max-w-md"
