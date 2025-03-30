@@ -136,8 +136,8 @@ const Skills = () => {
           >
             <div className="hexagon-container">
             <div className="hexagon bg-white shadow-sm flex flex-col items-center justify-center gap-2 p-2">
-                <i className={`${skill.icon} text-3xl`} style={{ color: skill.color }}></i>
-                <span className="text-xs font-medium text-purple-800 text-center leading-tight">{skill.name}</span>
+                <i className={`${skill.icon} text-4xl text-purple-600`}></i>
+                <span className="text-sm font-medium text-purple-400 text-center leading-tight">{skill.name}</span>
               </div>
             </div>
           </motion.div>

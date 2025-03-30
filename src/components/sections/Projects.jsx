@@ -115,17 +115,15 @@ const Projects = () => {
   const handleProjectSelect = (projectTitle) => {
     const project = projectsData.find(p => p.title === projectTitle);
     
-    // Using the exit animation properly
     setSelectedProject(null);
     
-    // Adding a small delay for the new project to enter after the previous one exits
     setTimeout(() => {
       setSelectedProject(project);
     }, 300);
   };
 
   return (
-    <section className="min-h-screen w-full px-4 md:px-8 py-12 bg-gradient-to-br from-white to-purple-50/50">
+    <section className="min-h-screen w-full px-4 md:px-8 py-12">
       <motion.h1 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -145,7 +143,6 @@ const Projects = () => {
       </motion.p>
       
       <main className={`grid ${isMobile ? 'grid-cols-1 gap-8' : 'grid-cols-1 lg:grid-cols-5 gap-6'} h-full`}>
-        {/* Project List - Fixed Height */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -159,7 +156,6 @@ const Projects = () => {
           />
         </motion.div>
         
-        {/* Project Card - Fixed Height */}
         <div className={`${isMobile ? '' : 'lg:col-span-3'}`} style={{ height: '500px' }}>
           <Magnet 
             padding={40} 
