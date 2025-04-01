@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CardExperience from '../ui/CardExperience';
 import GradientText from '../ui/GradientText';
+import SectionTitle from '../ui/SectionTitle';
 
 const TimelinePoint = ({ isRight, isInView }) => {
   return (
@@ -147,20 +148,7 @@ const Experience = () => {
 
   return (
     <section className='w-full min-h-screen py-24 flex flex-col items-center justify-start relative bg-violet-100'>
-      <motion.h2 
-        className="text-4xl font-bold text-slate-800 mb-16 relative"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        Experiencia
-        <motion.div 
-          className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 h-1 bg-purple-600"
-          initial={{ width: 0 }}
-          animate={{ width: '6rem' }}
-          transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
-        />
-      </motion.h2>
+      <SectionTitle title={'Experiencia'}></SectionTitle>
 
       <div className="container mx-auto relative px-4">
         <motion.div 

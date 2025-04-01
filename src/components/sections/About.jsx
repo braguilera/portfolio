@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Pen, Layout, Code, Smartphone, ChevronRight } from "lucide-react"
+import SectionTitle from "../ui/SectionTitle"
 
 const About = () => {
   // Variantes para animaciones con efecto spring
@@ -84,6 +85,8 @@ const About = () => {
 
   return (
     <section className="w-full py-24 px-6">
+      <SectionTitle title={'Sobre Mí'}></SectionTitle>
+
       <div className="mx-auto max-w-5xl">
         <motion.div
           className="flex flex-col md:flex-row gap-12 md:gap-20"

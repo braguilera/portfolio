@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Tab } from "@headlessui/react"
+import SectionTitle from "../ui/SectionTitle"
 
 const Skills = () => {
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -172,16 +173,10 @@ const Skills = () => {
   }
 
   return (
-    <section className="py-20 px-6 w-full  h-screen">
+    <section className="py-20 px-6 w-full  h-screen bg-violet-100">
       <div className="justify-center items-center">
-        <motion.h2
-          className="text-4xl font-bold text-center mb-12 text-purple-900"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Conocimientos
-        </motion.h2>
+        <SectionTitle title={'Habilidades'}></SectionTitle>
+
 
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
           <Tab.List className="flex rounded-xl gap-4 bg-white p-1 shadow-sm mb-12 max-w-md mx-auto">

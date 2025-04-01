@@ -3,6 +3,7 @@ import Magnet from "../ui/Magnet";
 import FlowingMenu from "../ui/FlowingMenu";
 import { motion, AnimatePresence } from 'framer-motion';
 import CardProjects from "../ui/CardProjects";
+import SectionTitle from '../ui/SectionTitle';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -124,14 +125,8 @@ const Projects = () => {
 
   return (
     <section className="min-h-screen w-full px-4 md:px-8 py-12">
-      <motion.h1 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="text-4xl font-bold text-slate-800 mb-4 md:mb-8"
-      >
-        Proyectos
-      </motion.h1>
+      <SectionTitle title={'Proyectos'}></SectionTitle>
+
       
       <motion.p
         initial={{ opacity: 0, y: -10 }}
