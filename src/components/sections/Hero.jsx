@@ -86,21 +86,21 @@ const Hero = () => {
     <div className="h-[90vh] w-screen flex justify-center relative px-8 py-4 text-slate-700">
       <GeometricShapes />
 
-      <div className="w-7xl my-12 flex flex-col">
+      <div className="w-full p-4 xl:w-7xl my-12 flex flex-col">
         <div className="mb-8 flex items-center space-x-2">
-          <div className="h-px w-12 bg-purple-800/50"></div>
-          <span className="text-2xl font-light tracking-wider">Braian Alejandro Aguilera</span>
+          <div className="h-px w-4 xl:w-12 bg-purple-800/50"></div>
+          <span className=" xl:text-2xl font-light tracking-wider">Braian Alejandro Aguilera</span>
         </div>
 
         <motion.h2
-          className="w-full text-6xl font-bold mb-2"
+          className="w-full text-4xl xl:text-6xl font-bold xl:mb-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
           Desarrollador <span className="text-purple-800">Front-End</span> dedicado a la
         </motion.h2>
 
-        <article className="w-fit flex text-center items-center gap-4 text-6xl font-bold">
+        <article className="w-fit flex flex-col xl:flex-row xl:text-center items-center gap-4 text-4xl xl:text-6xl font-bold">
           <h1>construcción de </h1>
           <RotatingText
             texts={['interfaces modernas', 'aplicaciones interactivas', 'soluciones digitales']}
@@ -117,7 +117,7 @@ const Hero = () => {
         </article>
 
         <motion.p
-          className="mb-8 text-lg font-light leading-relaxed max-w-md"
+          className="mb-8 mt-4 xl:mt-0 text-lg font-light leading-relaxed max-w-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -133,7 +133,7 @@ const Hero = () => {
         </motion.button>
       </div>
 
-      <div className="flex-1 absolute -bottom-10 right-80 z-10 flex items-center justify-center h-96">
+      <div className="hidden xl:flex-1 absolute -bottom-10 right-80 z-10 xl:flex items-center justify-center h-96">
         <motion.div
           className="relative cursor-pointer"
           onHoverStart={() => setIsHovered(true)}
