@@ -81,27 +81,28 @@ const Hero = () => {
       position: "bottomRight",
     },
   ]
-
+  
   return (
     <div className="h-[90vh] w-screen flex justify-center relative px-8 py-4 text-slate-700">
       <GeometricShapes />
+      <ButtonSocial/>
 
-      <div className="w-full p-4 xl:w-7xl my-12 flex flex-col">
+      <div className="w-mdp-4 md:w-4xl xl:w-7xl my-12 flex flex-col">
         <div className="mb-8 flex items-center space-x-2">
           <div className="h-px w-4 xl:w-12 bg-purple-800/50"></div>
           <span className=" xl:text-2xl font-light tracking-wider">Braian Alejandro Aguilera</span>
         </div>
 
         <motion.h2
-          className="w-full text-4xl xl:text-6xl font-bold xl:mb-2"
+          className="w-full text-2xl sm:text-3xl md:text-5xl xl:text-6xl font-bold xl:mb-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Desarrollador <span className="text-purple-800">Front-End</span> dedicado a la
+          Desarrollador <span className="text-purple-800">Front-End</span>
         </motion.h2>
 
-        <article className="w-fit flex flex-col xl:flex-row xl:text-center items-center gap-4 text-4xl xl:text-6xl font-bold">
-          <h1>construcción de </h1>
+        <article className="w-fit flex flex-col md:text-4xl gap-2 md:gap-4 text-xl sm:text-2xl xl:text-5xl font-bold items-start">
+          <h1> dedicado a la construcción de </h1>
           <RotatingText
             texts={['interfaces modernas', 'aplicaciones interactivas', 'soluciones digitales']}
             mainClassName="px-2 sm:px-2 md:px-3 bg-purple-800 text-purple-100 overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg"
@@ -117,7 +118,7 @@ const Hero = () => {
         </article>
 
         <motion.p
-          className="mb-8 mt-4 xl:mt-0 text-lg font-light leading-relaxed max-w-md"
+          className="mb-8 mt-2 text-sm md:text-xl w-72 md:w-xl font-light leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -125,7 +126,7 @@ const Hero = () => {
         </motion.p>
 
         <motion.button
-          className="group flex w-fit cursor-pointer items-center space-x-2 rounded-full border border-purple-800/20 bg-purple-800/10 px-6 py-3 backdrop-blur-sm transition-all hover:bg-purple-800/20"
+          className="group flex w-fit cursor-pointer text-sm md:text-lg items-center space-x-2 rounded-full border border-purple-800/20 bg-purple-800/10 px-6 py-3 backdrop-blur-sm transition-all hover:bg-purple-800/20 text-purple-400 hover:text-purple-800/50"
           whileHover={{ scale: 1.05 }}
         >
           <span>Descargar CV</span>
@@ -133,7 +134,7 @@ const Hero = () => {
         </motion.button>
       </div>
 
-      <div className="hidden xl:flex-1 absolute -bottom-10 right-80 z-10 xl:flex items-center justify-center h-96">
+      <div className="hidden md:flex-1 absolute -bottom-10 right-60 lg:right-80 z-10 md:flex items-center justify-center h-96">
         <motion.div
           className="relative cursor-pointer"
           onHoverStart={() => setIsHovered(true)}
@@ -151,7 +152,7 @@ const Hero = () => {
             ))}
 
             <motion.div
-              className="relative z-10 w-[300px] h-[400px] flex items-center justify-center"
+              className="relative z-10 md:w-[300px] md:h-[400px] flex items-center justify-center"
               animate={{
                 scale: isHovered ? 1.1 : 1,
                 transition: { type: "spring", stiffness: 300 },
@@ -186,7 +187,6 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <ButtonSocial></ButtonSocial>
     </div>
   )
 }

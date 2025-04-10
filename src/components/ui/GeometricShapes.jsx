@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 export default function GeometricShapes() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Hexágono grande con rotación 3D */}
+      {/* Hexágono grande */}
       <motion.div
         className="absolute right-[15%] top-[25%]"
         initial={{ opacity: 0 }}
@@ -47,7 +47,7 @@ export default function GeometricShapes() {
           className="backdrop-blur-sm"
           style={{
             width: "110px",
-            height: "95.26px", // 110 * 0.866
+            height: "95.26px", 
             clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
             backgroundColor: "rgba(245, 158, 11, 0.1)",
             border: "1px solid rgba(245, 158, 11, 0.2)",
@@ -55,7 +55,7 @@ export default function GeometricShapes() {
         />
       </motion.div>
 
-      {/* Pequeño grupo de hexágonos conectados - Eliminado para reducir la cantidad de hexágonos */}
+      {/* Pequeños hexagonos */}
 
       <motion.div
         className="absolute right-[25%] bottom-[30%]"
@@ -78,11 +78,10 @@ export default function GeometricShapes() {
   )
 }
 
-// Componente para crear un hexágono 3D (prisma)
+{/* Creador de Hexagono giratorio */}
 function HexagonPrism({ size, primaryColor, secondaryColor }) {
-  const height = size * 0.2 // Altura del prisma
+  const height = size * 0.2 
 
-  // Generamos los puntos para un hexágono regular
   const hexPoints = []
   for (let i = 0; i < 6; i++) {
     const angle = (Math.PI / 3) * i
@@ -94,7 +93,6 @@ function HexagonPrism({ size, primaryColor, secondaryColor }) {
 
   return (
     <div className="relative transform-style-3d">
-      {/* Cara superior */}
       <div
         className="absolute transform-style-3d"
         style={{
@@ -114,7 +112,6 @@ function HexagonPrism({ size, primaryColor, secondaryColor }) {
         />
       </div>
 
-      {/* Cara inferior */}
       <div
         className="absolute transform-style-3d"
         style={{
@@ -134,12 +131,10 @@ function HexagonPrism({ size, primaryColor, secondaryColor }) {
         />
       </div>
 
-      {/* Caras laterales */}
       {hexPoints.map((point, i) => {
         const nextI = (i + 1) % 6
         const nextPoint = hexPoints[nextI]
 
-        // Calculamos el ancho, la posición y la rotación de cada cara lateral
         const width = Math.sqrt(Math.pow(nextPoint.x - point.x, 2) + Math.pow(nextPoint.y - point.y, 2))
 
         const centerX = (point.x + nextPoint.x) / 2
@@ -171,7 +166,7 @@ function HexagonPrism({ size, primaryColor, secondaryColor }) {
   
 }
 
-// Componente para crear un pequeño grid de hexágonos
+// Crear pequeño grid de hexágonos
 function HexGrid() {
   return (
     <div className="relative">

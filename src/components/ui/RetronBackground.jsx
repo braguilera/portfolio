@@ -4,9 +4,7 @@ import { motion } from "framer-motion"
 export default function RetronBackground({ children }) {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Fondo fijo con degradado en tonos violeta claro */}
       <div className="fixed inset-0 z-0 bg-gradient-to-br from-purple-50 via-purple-100 to-indigo-200 transition-colors duration-500">
-        {/* Patrón de hexágonos - Reducido y menos invasivo */}
         <div className="absolute inset-0 opacity-5">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -25,12 +23,10 @@ export default function RetronBackground({ children }) {
                 />
               </pattern>
             </defs>
-            {/* Limitando el patrón a solo una parte del fondo */}
             <rect width="100%" height="70%" y="15%" fill="url(#hexagons)" />
           </svg>
         </div>
 
-        {/* Líneas onduladas violeta */}
         <svg
           className="absolute right-0 top-0 h-full w-1/2 opacity-10"
           viewBox="0 0 100 800"
@@ -57,9 +53,7 @@ export default function RetronBackground({ children }) {
           ))}
         </svg>
 
-        {/* Elementos decorativos flotantes - Reducidos en cantidad */}
         <div className="absolute inset-0">
-          {/* Hexágonos flotantes - Reducidos a 6 */}
           {[...Array(6)].map((_, i) => (
             <motion.div
               key={`hex-${i}`}
@@ -100,7 +94,6 @@ export default function RetronBackground({ children }) {
             </motion.div>
           ))}
 
-          {/* Destellos violeta - Reducidos a 10 */}
           {[...Array(10)].map((_, i) => (
             <motion.div
               key={`glow-${i}`}
@@ -124,7 +117,6 @@ export default function RetronBackground({ children }) {
             />
           ))}
 
-          {/* Destellos amarillos - Reducidos a 5 */}
           {[...Array(5)].map((_, i) => (
             <motion.div
               key={`yellow-glow-${i}`}
@@ -149,15 +141,13 @@ export default function RetronBackground({ children }) {
           ))}
         </div>
 
-        <div className="absolute inset-0 flex justify-center opacity-[0.03]">
-          <div className="text-[20vw] font-bold text-purple-800">FRONTEND</div>
+        <div className="absolute inset-0 flex justify-center items-center opacity-[0.03]">
+          <div className="text-[19vw] font-bold text-purple-800">FRONTEND</div>
         </div>
 
-        {/* Gradient overlay para dar más presencia al violeta */}
         <div className="absolute inset-0 bg-gradient-radial from-transparent to-purple-200/20"></div>
       </div>
 
-      {/* Contenedor de contenido */}
       <div className="relative z-10">{children}</div>
     </div>
   )
@@ -169,7 +159,7 @@ function Hexagon({ size, color, borderColor }) {
     <div
       style={{
         width: `${size}px`,
-        height: `${size * 0.866}px`, // Factor de altura para hexágono regular
+        height: `${size * 0.866}px`, 
         position: "relative",
         clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
         backgroundColor: color,

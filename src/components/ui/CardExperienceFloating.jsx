@@ -64,7 +64,7 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
         zIndex: isExpanded ? 20 : 0,
         position: "absolute",
       }}
-      className={`w-64 bg-white rounded-2xl shadow-xl p-4 border-2 border-purple-100 ${getCardStyle()}`}
+      className={`w-52 lg:w-64 bg-white rounded-2xl shadow-xl p-4 border-2 border-purple-100 ${getCardStyle()}`}
       whileHover={{
         scale: isExpanded ? 1.05 : 1,
         zIndex: 20,

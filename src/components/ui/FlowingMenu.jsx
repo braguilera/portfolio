@@ -18,7 +18,7 @@ function FlowingMenu({ items = [], onSelect }) {
   )
 }
 
-function MenuItem({ text, image, onClick }) { // Añadir onClick aquí
+function MenuItem({ text, image, onClick }) { 
   const itemRef = React.useRef(null);
   const marqueeRef = React.useRef(null);
   const marqueeInnerRef = React.useRef(null);
