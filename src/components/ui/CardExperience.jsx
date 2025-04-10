@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Building2, Github, ExternalLink } from 'lucide-react';
+import { Calendar, Building2, Github, ExternalLink, Code } from 'lucide-react';
 
 const CardExperience = ({ title, company, date, description, technologies = [], githubUrl, demoUrl, backgroundImage }) => {
   const getTechIcon = (techName) => {
@@ -29,7 +29,7 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
   };
 
   return (
-    <article className="relative overflow-hidden rounded-xl shadow-lg border border-purple-100 transition-all duration-300 group bg-white">
+    <article className="relative overflow-hidden rounded-xl shadow-lg border border-purple-100 transition-all duration-300 group bg-white h-full">
       <div className="absolute inset-0 z-0">
         {backgroundImage && (
           <div className="w-full h-full">
@@ -43,34 +43,34 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
         <div className="absolute inset-0 bg-gradient-to-r from-purple-50/80 to-white/70" />
       </div>
 
-      <div className="relative z-10 p-6 flex flex-col h-full">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
+      <div className="relative z-10 p-4 md:p-6 flex flex-col h-full">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-4 mb-3 md:mb-4">
           <div>
-            <h3 className="text-xl font-bold text-slate-800 mb-1">{title}</h3>
+            <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-1">{title}</h3>
             <div className="flex items-center gap-2 text-slate-600 mb-2">
-              <Building2 size={16} className="text-purple-500" />
+              <Building2 size={16} className="text-purple-500 flex-shrink-0" />
               <span className="font-medium">{company}</span>
             </div>
           </div>
           <div className="flex items-center gap-2 bg-purple-100/60 px-3 py-1 rounded-full self-start">
-            <Calendar size={14} className="text-purple-500" />
+            <Calendar size={14} className="text-purple-500 flex-shrink-0" />
             <span className="text-sm font-medium text-slate-600">{date}</span>
           </div>
         </div>
 
-        <p className="text-slate-600 mb-6 line-clamp-3">{description}</p>
+        <p className="text-sm md:text-base text-slate-600 mb-4 md:mb-6 line-clamp-3">{description}</p>
 
         {technologies.length > 0 && (
-          <div className="mb-6">
+          <div className="mb-4 md:mb-6">
             <div className="flex items-center gap-2 mb-2">
-              <i className='bx bx-code-alt text-purple-500 text-lg'></i>
+              <Code size={16} className="text-purple-500 flex-shrink-0" />
               <span className="text-sm font-medium text-slate-600">Tecnologías</span>
             </div>
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
                 <span 
                   key={index} 
-                  className="text-xs bg-purple-100 text-purple-800 px-3 py-1 rounded-full border border-purple-200 flex items-center gap-1"
+                  className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full border border-purple-200 flex items-center gap-1"
                 >
                   {getTechIcon(tech)}
                   {tech}
@@ -86,9 +86,9 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
               href={githubUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-600 transition-colors"
+              className="flex items-center gap-2 text-xs md:text-sm text-slate-600 hover:text-purple-600 transition-colors"
             >
-              <Github size={16} className="text-purple-500" />
+              <Github size={16} className="text-purple-500 flex-shrink-0" />
               <span>GitHub</span>
             </a>
           )}
@@ -97,9 +97,9 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
               href={demoUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-slate-600 hover:text-purple-600 transition-colors"
+              className="flex items-center gap-2 text-xs md:text-sm text-slate-600 hover:text-purple-600 transition-colors"
             >
-              <ExternalLink size={16} className="text-purple-500" />
+              <ExternalLink size={16} className="text-purple-500 flex-shrink-0" />
               <span>Demo</span>
             </a>
           )}
