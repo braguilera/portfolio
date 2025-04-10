@@ -84,40 +84,26 @@ const About = () => {
   ]
 
   return (
-    <section className="w-full py-24 px-6">
+    <section className="w-full py-12 md:py-24 px-4 md:px-6">
       <SectionTitle title={'Sobre Mí'}></SectionTitle>
-
       <div className="mx-auto max-w-5xl">
         <motion.div
-          className="flex flex-col md:flex-row gap-12 md:gap-20"
+          className="flex flex-col md:flex-row gap-8 lg:gap-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
           {/* Columna izquierda con título y descripción */}
-          <motion.div className="flex-1" variants={itemVariants}>
-            <motion.div
-              className="inline-block mb-6 bg-purple-100 px-4 py-2 rounded-full"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-purple-800 font-medium text-sm">Descubre quién soy</span>
-            </motion.div>
+          <motion.div className="flex-1 md:mt-15" variants={itemVariants}>
 
-            <motion.h2 className="text-4xl md:text-5xl font-bold mb-8 text-purple-900" variants={itemVariants}>
-              Sobre mí
-            </motion.h2>
-
-            <motion.p className="text-lg text-gray-700 mb-6 leading-relaxed" variants={itemVariants}>
+            <motion.p className="text-base md:text-lg text-gray-700 mb-4 md:mb-6 leading-relaxed" variants={itemVariants}>
               Soy un desarrollador frontend al cual le impulsa ver cómo un sitio web cobra vida, desde su estructura
               eficiente hasta una estética que genera impacto. Cada proyecto es una oportunidad para aprender algo nuevo
               y mejorar mis habilidades.
             </motion.p>
 
-            <motion.p className="text-lg text-gray-700 mb-10 leading-relaxed" variants={itemVariants}>
+            <motion.p className="text-base md:text-lg text-gray-700 mb-8 md:mb-10 leading-relaxed" variants={itemVariants}>
               Además, priorizo siempre la accesibilidad y una experiencia de usuario agradable, porque sé que un buen
               diseño es clave para el éxito de cualquier producto.
             </motion.p>
@@ -125,7 +111,7 @@ const About = () => {
             <motion.div variants={itemVariants}>
               <motion.a
                 href="#contact"
-                className="group inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-purple-700 transition-colors"
+                className="group inline-flex items-center gap-2 bg-purple-600 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full shadow-md hover:bg-purple-700 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -137,26 +123,26 @@ const About = () => {
 
           {/* Columna derecha con servicios */}
           <motion.div className="flex-1" variants={itemVariants}>
-            <motion.h3 className="text-2xl font-bold mb-8 text-purple-900" variants={itemVariants}>
+            <motion.h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-purple-900" variants={itemVariants}>
               Servicios
             </motion.h3>
 
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {services.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  className="bg-white rounded-xl border border-purple-100 p-5 shadow-sm hover:shadow-md transition-shadow group"
+                  className="bg-white rounded-xl border border-purple-100 p-4 md:p-5 shadow-sm hover:shadow-md transition-shadow group"
                   variants={serviceVariants}
                   custom={index}
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center shrink-0 group-hover:bg-purple-200 transition-colors">
+                  <div className="flex gap-3 md:gap-4 items-start">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-purple-100 flex items-center justify-center shrink-0 group-hover:bg-purple-200 transition-colors">
                       {service.icon}
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-purple-900 mb-1">{service.title}</h4>
-                      <p className="text-gray-600">{service.description}</p>
+                      <h4 className="font-bold text-base md:text-lg text-purple-900 mb-1">{service.title}</h4>
+                      <p className="text-sm md:text-base text-gray-600">{service.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -170,4 +156,3 @@ const About = () => {
 }
 
 export default About
-

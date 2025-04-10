@@ -13,9 +13,9 @@ const SectionTitle = ({ title, subtitle, align = "center", colorScheme = "purple
   // Esquemas de color
   const colorSchemes = {
     purpleHarmony: {
-      title: "text-slate-800",
+      title: "text-violet-500",
       highlight: "text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-600",
-      decoration: "from-purple-600 to-indigo-600",
+      decoration: "from-violet-300 to-violet-700",
       subtitle: "text-slate-600",
     },
     elegantPurple: {
@@ -115,7 +115,7 @@ const SectionTitle = ({ title, subtitle, align = "center", colorScheme = "purple
 
           {/* Hexágono que aparece al final de la línea */}
           <motion.div
-            className={`w-4 h-4 clip-hexagon bg-gradient-to-r ${colors.decoration} absolute`}
+            className={`w-4 h-4 clip-hexagon bg-gradient-to-l ${colors.decoration} absolute`}
             initial={{ scale: 0, rotate: 90, opacity: 0 }}
             animate={hexagonControls}
             style={{
