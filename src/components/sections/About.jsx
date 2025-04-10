@@ -131,13 +131,12 @@ const About = () => {
               {services.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  className="bg-white rounded-xl border border-purple-100 p-4 md:p-5 shadow-sm hover:shadow-md transition-shadow group"
+                  className="bg-white rounded-xl border border-purple-100 p-4 md:p-5 shadow-sm"
                   variants={serviceVariants}
                   custom={index}
-                  whileHover={{ y: -5 }}
                 >
                   <div className="flex gap-3 md:gap-4 items-start">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-purple-100 flex items-center justify-center shrink-0 group-hover:bg-purple-200 transition-colors">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-purple-100 flex items-center justify-center shrink-0">
                       {service.icon}
                     </div>
                     <div>

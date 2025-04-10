@@ -7,10 +7,9 @@ import { Mail, Github, Linkedin, Heart, Phone, Copy, Check } from "lucide-react"
 const Contact = () => {
   const [copiedItem, setCopiedItem] = useState(null)
 
-  // Datos reales (no visibles en el HTML, protegidos contra scraping)
   const contactData = {
-    email: "braian@example.com", // Tu email real iría aquí
-    phone: "+54 11 1234 5678", // Tu teléfono real iría aquí
+    email: "braian@example.com", 
+    phone: "+54 11 1234 5678", 
   }
 
   // Resetear el estado de copiado después de 2 segundos
@@ -23,7 +22,6 @@ const Contact = () => {
     }
   }, [copiedItem])
 
-  // Función para copiar al portapapeles
   const copyToClipboard = (type) => {
     const textToCopy = type === "email" ? contactData.email : contactData.phone
 
@@ -37,13 +35,11 @@ const Contact = () => {
       })
   }
 
-  // Función para redireccionar
   const redirectTo = (type) => {
     const url = type === "email" ? `mailto:${contactData.email}` : `tel:${contactData.phone.replace(/\s+/g, "")}`
     window.open(url, "_blank")
   }
 
-  // Variantes para la animación de entrada desde abajo
   const containerVariants = {
     hidden: { y: 100, opacity: 0 },
     visible: {
@@ -73,7 +69,6 @@ const Contact = () => {
     },
   }
 
-  // Datos de contacto (con texto protegido)
   const contactInfo = [
     {
       icon: <Mail className="h-5 w-5" />,
@@ -89,7 +84,6 @@ const Contact = () => {
     },
   ]
 
-  // Redes sociales
   const socialLinks = [
     {
       icon: <Linkedin className="h-5 w-5" />,
@@ -113,7 +107,6 @@ const Contact = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      {/* Fondo con hexágonos sutiles */}
       <div className="absolute inset-0 -z-10 opacity-5">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -138,15 +131,9 @@ const Contact = () => {
 
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="flex flex-col items-center justify-center">
-          {/* Hexágono central con iniciales */}
           <motion.div
             className="relative mb-8"
             variants={itemVariants}
-            whileHover={{
-              rotate: [0, -5, 5, -5, 0],
-              scale: 1.05,
-              transition: { duration: 0.5 },
-            }}
           >
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl clip-hexagon shadow-lg">
               BA
@@ -154,12 +141,10 @@ const Contact = () => {
             <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 to-indigo-600 opacity-50 blur-sm clip-hexagon -z-10"></div>
           </motion.div>
 
-          {/* Información de contacto con botones de copia y redirección */}
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
             {contactInfo.map((item, index) => (
               <motion.div key={index} className="relative" variants={itemVariants}>
                 <div className="flex items-start justify-between rounded-full border border-purple-300 p-1 py-1 gap-2">
-                  {/* Área clickeable: icono + texto */}
                   <motion.button
                     className="flex items-center gap-2"
                     onClick={() => redirectTo(item.type)}
@@ -244,19 +229,7 @@ const Contact = () => {
           {/* Copyright */}
           <motion.div className="text-center text-gray-600 text-sm" variants={itemVariants}>
             <p className="flex items-center justify-center gap-1">
-              © {new Date().getFullYear()} Braian Alejandro Aguilera. Hecho con
-              <motion.div
-                animate={{
-                  scale: [1, 1.2, 1],
-                  transition: {
-                    repeat: Number.POSITIVE_INFINITY,
-                    repeatType: "reverse",
-                    duration: 1,
-                  },
-                }}
-              >
-                <Heart className="h-4 w-4 text-red-500 inline" />
-              </motion.div>
+              © {new Date().getFullYear()} Braian Alejandro Aguilera.
             </p>
           </motion.div>
         </div>

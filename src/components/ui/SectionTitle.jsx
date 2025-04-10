@@ -10,7 +10,6 @@ const SectionTitle = ({ title, align = "center", colorScheme = "purpleHarmony" }
   const lineControls = useAnimation()
   const hexagonControls = useAnimation()
 
-  // Esquemas de color
   const colorSchemes = {
     purpleHarmony: {
       title: "text-purple-800",
@@ -20,20 +19,16 @@ const SectionTitle = ({ title, align = "center", colorScheme = "purpleHarmony" }
 
   const colors = colorSchemes[colorScheme] || colorSchemes.purpleHarmony
 
-  // Clases de alineación
   const alignClasses = {
     center: "text-center items-center",
     left: "text-left items-start",
     right: "text-right items-end",
   }
 
-  // Iniciar animación cuando está en vista
   useEffect(() => {
     if (isInView) {
-      // Iniciar la animación del título
       controls.start("visible")
 
-      // Iniciar la animación de la línea
       lineControls
         .start({
           width: "90%",
@@ -43,7 +38,6 @@ const SectionTitle = ({ title, align = "center", colorScheme = "purpleHarmony" }
           },
         })
         .then(() => {
-          // Cuando la línea termina, iniciar la animación del hexágono
           hexagonControls.start({
             scale: 1,
             rotate: 0,
@@ -59,7 +53,6 @@ const SectionTitle = ({ title, align = "center", colorScheme = "purpleHarmony" }
     }
   }, [isInView, controls, lineControls, hexagonControls])
 
-  // Resaltar cada segunda palabra
   const titleWithHighlights = title.split(" ").map((word, index) => {
     return index % 2 === 1 ? (
       <span key={index} className={colors.highlight}>
@@ -87,9 +80,7 @@ const SectionTitle = ({ title, align = "center", colorScheme = "purpleHarmony" }
         <h2 className={`text-4xl md:text-5xl font-bold ${colors.title} mb-3`}>{titleWithHighlights}</h2>
 
         <div className="flex items-center gap-2 my-4 relative w-full">
-          {/* Contenedor para la línea con ancho fijo */}
           <div className="relative w-full h-0.5 overflow-hidden">
-            {/* Línea con animación de izquierda a derecha */}
             <motion.div
               className={`h-full bg-gradient-to-r ${colors.decoration} rounded-full absolute top-0 left-0`}
               initial={{ width: 0 }}
@@ -105,7 +96,6 @@ const SectionTitle = ({ title, align = "center", colorScheme = "purpleHarmony" }
             />
           </div>
 
-          {/* Hexágono que aparece al final de la línea */}
           <motion.div
             className={`w-4 h-4 clip-hexagon bg-gradient-to-l ${colors.decoration} absolute`}
             initial={{ scale: 0, rotate: 90, opacity: 0 }}
