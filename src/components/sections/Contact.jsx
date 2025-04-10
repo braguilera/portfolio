@@ -158,7 +158,7 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
             {contactInfo.map((item, index) => (
               <motion.div key={index} className="relative" variants={itemVariants}>
-                <div className="flex items-center bg-white rounded-full shadow-sm border border-purple-100 pl-3 pr-1 py-1 gap-2 hover:shadow-md transition-all">
+                <div className="flex items-start justify-between rounded-full border border-purple-300 p-1 py-1 gap-2">
                   {/* Área clickeable: icono + texto */}
                   <motion.button
                     className="flex items-center gap-2"
@@ -167,22 +167,22 @@ const Contact = () => {
                     whileTap={{ scale: 0.97 }}
                     aria-label={`Abrir ${item.type}`}
                   >
-                    <div className={`w-8 h-8 rounded-full ${item.color} flex items-center justify-center text-white`}>
+                    <div className={`w-full px-4 gap-2 h-8 rounded-full ${item.color} flex items-center justify-center text-slate-100 cursor-pointer`}>
                       {item.icon}
+                      <span className="text-slate-100 font-medium">{item.text}</span>
                     </div>
-                    <span className="text-gray-700 font-medium">{item.text}</span>
                   </motion.button>
 
                   {/* Botón para copiar */}
                   <motion.button
-                    className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors"
+                    className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-slate-600 cursor-pointer transition-colors"
                     onClick={() => copyToClipboard(item.type)}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     aria-label={`Copiar ${item.type}`}
                   >
                     {copiedItem === item.type ? (
-                      <Check className="h-4 w-4 text-green-500" />
+                      <Check className="h-4 w-4 text-green-600" />
                     ) : (
                       <Copy className="h-4 w-4" />
                     )}
@@ -215,7 +215,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-10 h-10 rounded-full text-white ${social.color} flex items-center justify-center shadow-md hover:shadow-lg transition-all`}
-                whileHover={{ y: -5, scale: 1.1 }}
+                whileHover={{ scale: 1.05, duration:.5 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label={social.label}
               >

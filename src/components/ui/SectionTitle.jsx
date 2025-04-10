@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 
-const SectionTitle = ({ title, subtitle, align = "center", colorScheme = "purpleHarmony" }) => {
+const SectionTitle = ({ title, align = "center", colorScheme = "purpleHarmony" }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const controls = useAnimation()
@@ -13,17 +13,9 @@ const SectionTitle = ({ title, subtitle, align = "center", colorScheme = "purple
   // Esquemas de color
   const colorSchemes = {
     purpleHarmony: {
-      title: "text-violet-500",
-      highlight: "text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-600",
-      decoration: "from-violet-300 to-violet-700",
-      subtitle: "text-slate-600",
-    },
-    elegantPurple: {
-      title: "text-slate-900",
-      highlight: "text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-500",
-      decoration: "from-purple-500 to-indigo-600",
-      subtitle: "text-slate-600",
-    },
+      title: "text-purple-800",
+      decoration: "from-purple-500 via-purple-600 to-purple-900",
+    }
   }
 
   const colors = colorSchemes[colorScheme] || colorSchemes.purpleHarmony
@@ -124,23 +116,6 @@ const SectionTitle = ({ title, subtitle, align = "center", colorScheme = "purple
           />
         </div>
 
-        {subtitle && (
-          <motion.p
-            className={`${colors.subtitle} max-w-2xl ${align === "center" ? "mx-auto" : ""}`}
-            initial={{ opacity: 0, y: 10 }}
-            animate={controls}
-            variants={{
-              hidden: { opacity: 0, y: 10 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.4, duration: 0.5 },
-              },
-            }}
-          >
-            {subtitle}
-          </motion.p>
-        )}
       </motion.div>
     </div>
   )
