@@ -33,9 +33,9 @@ const Skills = () => {
     if (windowWidth < 640) {
       // Móviles pequeños
       setHoneycombSize({
-        hexSize: 50, // Más pequeño para móvil
-        hexSpacingX: 55,
-        hexSpacingY: 45,
+        hexSize: 70, // Más pequeño para móvil
+        hexSpacingX: 80,
+        hexSpacingY: 60,
         containerHeight: 300,
         containerWidth: 300
       })
@@ -258,7 +258,7 @@ const Skills = () => {
             <div className="hexagon-container" style={{ width: `${honeycombSize.hexSize}px`, height: `${honeycombSize.hexSize}px` }}>
               <div className="hexagon bg-white shadow-sm flex flex-col items-center justify-center gap-1 p-1">
                 <i className={`${skill.icon} ${windowWidth < 640 ? 'text-lg' : windowWidth < 768 ? 'text-xl' : 'text-3xl'} text-purple-600`}></i>
-                <span className={`${windowWidth < 640 ? 'text-xs leading-none' : windowWidth < 768 ? 'text-xs' : 'text-sm'} font-medium text-purple-400 text-center ${windowWidth < 640 ? 'leading-none' : 'leading-tight'}`}>
+                <span className={`text-sm lg:text-lg font-medium text-purple-400 text-center ${windowWidth < 640 ? 'leading-none' : 'leading-tight'}`}>
                   {skill.name}
                 </span>
               </div>
