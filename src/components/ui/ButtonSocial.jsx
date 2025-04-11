@@ -1,11 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Mail, Linkedin, Github, Share2 } from 'lucide-react';
 import SocialIconButton from "./SocialIconButton"
 
 const ButtonSocial = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const radius = 75;
+  const [isMobile, setIsMobile] = useState(false);
+  // Radio adaptable según el tamaño de pantalla
+  const radius = isMobile ? 55 : 65;
+
+  // Detectar si es un dispositivo móvil
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    
+    // Comprobar al cargar y al cambiar el tamaño de la ventana
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   const socialButtons = [
     { icon: Phone, position: 'top', url: 'tel:+123456789' },
@@ -18,16 +35,16 @@ const ButtonSocial = () => {
     closed: {
       rotate: 0,
       scale: 1,
-      background: "rgb(232, 216, 247)", // Color base principal
+      background: "rgb(232, 216, 247)",
       boxShadow: "0 4px 15px -2px rgba(200, 180, 220, 0.2)",
-      border: "2px solid rgba(232, 216, 247, 0.5)" // Borde sutil
+      border: "2px solid rgba(232, 216, 247, 0.5)"
     },
     open: {
       rotate: 45,
       scale: 0.92,
-      background: "rgb(215, 195, 255)", // Color más intenso al abrir
+      background: "rgb(215, 195, 255)",
       boxShadow: "0 8px 25px -3px rgba(180, 160, 210, 0.25)",
-      border: "2px solid rgba(232, 216, 247, 0.7)", // Borde más visible
+      border: "2px solid rgba(232, 216, 247, 0.7)",
       transition: {
         type: "spring",
         stiffness: 280,
@@ -51,8 +68,8 @@ const ButtonSocial = () => {
   };
 
   return (
-    <div className="fixed left-28 bottom-28 z-50">
-      <div className="w-14 h-14 relative">
+    <div className={`fixed bottom-20 z-50 ${isMobile ? 'right-10' : 'left-8 sm:left-16 md:left-28'}`}>
+      <div className="w-12 h-12 sm:w-14 sm:h-14 relative">
         {/* Efectos de onda en tonos coordinados */}
         {[0, 1, 2].map((i) => (
           <motion.div
@@ -87,7 +104,7 @@ const ButtonSocial = () => {
             animate={{ rotate: isOpen ? 45 : 0 }}
             transition={{ type: "spring", stiffness: 350 }}
           >
-            <Share2 className="w-6 h-6" strokeWidth="2.3" stroke="rgb(101,62,148)" />
+            <Share2 className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth="2.3" stroke="rgb(101,62,148)" />
           </motion.div>
         </motion.button>
 
@@ -101,6 +118,7 @@ const ButtonSocial = () => {
               url={button.url}
               index={index}
               radius={radius}
+              isMobile={isMobile}
               colorPalette={{
                 background: "rgb(245, 235, 255)",
                 border: "rgba(210, 190, 230, 0.5)",
