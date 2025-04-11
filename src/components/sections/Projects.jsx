@@ -124,7 +124,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="min-h-screen w-full px-4 md:px-8 py-12">
+    <section className="min-h-screen w-full px-4 md:px-8 py-12 flex flex-col justify-center items-center">
       <SectionTitle title={'Proyectos'}></SectionTitle>
 
       
@@ -132,17 +132,17 @@ const Projects = () => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.1 }}
-        className="text-slate-600 max-w-2xl mb-8 md:mb-12"
+        className="text-slate-600 max-w-5xl mb-8 md:mb-12"
       >
         Selecciona un proyecto del menú interactivo para ver más detalles sobre las tecnologías utilizadas y acceder a demos o código fuente.
       </motion.p>
       
-      <main className={`grid ${isMobile ? 'grid-cols-1 gap-8' : 'grid-cols-1 lg:grid-cols-5 gap-6'} h-full`}>
+      <main className="flex flex-col xl:flex-row justify-between items-center gap-4 w-7xl h-full">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.2 }}
-          className={`relative ${isMobile ? '' : 'lg:col-span-2'} overflow-hidden rounded-xl shadow-md`}
+          className="relative w-1/3 sm:w-2/3 xl:w-full bg-purple-50 p4 overflow-hidden rounded-xl shadow-md"
           style={{ height: '500px' }}
         >
           <FlowingMenu 
@@ -151,13 +151,7 @@ const Projects = () => {
           />
         </motion.div>
         
-        <div className={`${isMobile ? '' : 'lg:col-span-3'}`} style={{ height: '500px' }}>
-          <Magnet 
-            padding={40} 
-            magnetStrength={40} 
-            wrapperClassName="h-full flex items-center justify-center" 
-            innerClassName="h-full w-full flex items-center justify-center"
-          >
+        <div className="w-1/4 sm:w-2/3 xl:w-full h-full flex justify-center items-center">
             <AnimatePresence mode="wait">
               {selectedProject ? (
                 <CardProjects 
@@ -190,34 +184,15 @@ const Projects = () => {
                   className="bg-purple-50/50 rounded-xl p-8 h-full border-2 border-dashed border-purple-200 flex flex-col items-center justify-center"
                   style={{ height: '500px', width: '100%' }}
                 >
-                  <motion.div 
-                    animate={{ 
-                      x: [-5, 5, -5],
-                      transition: {
-                        x: {
-                          repeat: Infinity,
-                          duration: 2,
-                          ease: "easeInOut"
-                        }
-                      }
-                    }}
+                  <div 
                     className="text-center"
                   >
                     <i className="bx bx-code-block text-4xl text-purple-400 mb-4"></i>
                     <p className="text-purple-600 font-medium">Selecciona un proyecto para ver los detalles</p>
-                    <motion.div 
-                      className="mt-4 flex justify-center"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.5 }}
-                    >
-                      <i className="bx bx-chevrons-left text-2xl text-purple-400 animate-pulse"></i>
-                    </motion.div>
-                  </motion.div>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
-          </Magnet>
         </div>
       </main>
     </section>

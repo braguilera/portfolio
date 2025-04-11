@@ -75,7 +75,7 @@ const CardProjects = ({ project, isVisible = true }) => {
           damping: 25
         }
       }}
-      className="relative bg-white rounded-xl shadow-md h-full w-full flex overflow-hidden"
+      className="relative bg-white rounded-xl shadow-md h-full w-8/9 lg:w-full flex flex-col overflow-hidden"
       style={{ height: '500px', maxHeight: '500px' }}
     >
       {/* Project Image - Left Side */}
@@ -84,7 +84,7 @@ const CardProjects = ({ project, isVisible = true }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ...springConfig, delay: 0.1 }}
-          className="w-1/3 h-full overflow-hidden"
+          className="w-full h-1/3 overflow-hidden"
         >
           <img 
             src={image} 
@@ -95,7 +95,7 @@ const CardProjects = ({ project, isVisible = true }) => {
       )}
 
       {/* Content - Right Side */}
-      <div className="p-6 flex flex-col flex-grow w-2/3 overflow-y-auto">
+      <div className="p-6 flex flex-col flex-grow w-full overflow-y-auto">
         <div className="flex items-center mb-4">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
@@ -129,7 +129,7 @@ const CardProjects = ({ project, isVisible = true }) => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ ...springConfig, delay: 0.3 }}
-          className="text-slate-600 leading-relaxed mb-6"
+          className="text-slate-600 leading-relaxed mb-2 h-32"
         >
           {description}
         </motion.p>
@@ -142,7 +142,7 @@ const CardProjects = ({ project, isVisible = true }) => {
             transition={{ ...springConfig, delay: 0.4 }}
             className="mb-6"
           >
-            <div className="flex items-center gap-2 mb-3">
+            <div className="flex items-center gap-2 mb-2">
               <i className='bx bx-code-alt text-purple-500 text-xl'></i>
               <span className="font-medium text-slate-600">Tecnologías</span>
             </div>
@@ -159,11 +159,7 @@ const CardProjects = ({ project, isVisible = true }) => {
                       delay: 0.4 + index * 0.05
                     }
                   }}
-                  whileHover={{ 
-                    scale: 1.05, 
-                    backgroundColor: "rgba(233, 213, 255, 0.8)" 
-                  }}
-                  className="flex items-center gap-2 bg-purple-50 px-3 py-1.5 rounded-full border border-purple-100"
+                  className="flex items-center gap-2 bg-purple-50 px-2 py-1 rounded-full border border-purple-100"
                 >
                   {getTechIcon(tech.name)}
                   <span className="text-sm text-purple-800">{tech.name}</span>
@@ -181,30 +177,26 @@ const CardProjects = ({ project, isVisible = true }) => {
           className="mt-auto flex gap-4"
         >
           {githubLink && (
-            <motion.a
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(233, 213, 255, 0.8)" }}
-              whileTap={{ scale: 0.98 }}
+            <a
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors"
+              className="flex items-center gap-2 text-xs md:text-sm text-slate-500 hover:text-purple-600 transition-colors group"
             >
-              <Github size={18} className="text-purple-600" />
-              <span className="text-purple-800 font-medium">Código</span>
-            </motion.a>
+              <Github size={18} className="text-slate-400 group-hover:text-purple-600" />
+              <span>Código</span>
+            </a>
           )}
           {websiteLink && (
-            <motion.a
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(233, 213, 255, 0.8)" }}
-              whileTap={{ scale: 0.98 }}
+            <a
               href={websiteLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors"
+              className="flex items-center gap-2 text-xs md:text-sm text-slate-500 hover:text-purple-600 transition-colors group"
             >
-              <ExternalLink size={18} className="text-purple-600" />
-              <span className="text-purple-800 font-medium">Demo</span>
-            </motion.a>
+              <ExternalLink size={18} className="text-slate-400 group-hover:text-purple-600" />
+              <span>Demo</span>
+            </a>
           )}
         </motion.div>
       </div>

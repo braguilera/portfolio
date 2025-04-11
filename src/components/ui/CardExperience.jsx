@@ -29,7 +29,7 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
   };
 
   return (
-    <article className="relative overflow-hidden rounded-xl shadow-lg border border-purple-100 transition-all duration-300 group bg-white h-full">
+    <article className="relative overflow-hidden rounded-xl shadow-lg border border-purple-100 transition-all duration-300 bg-white h-full">
       <div className="absolute inset-0 z-0">
         {backgroundImage && (
           <div className="w-full h-full">
@@ -86,9 +86,9 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
               href={githubUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs md:text-sm text-slate-600 hover:text-purple-600 transition-colors"
+              className="flex items-center gap-2 text-xs md:text-sm text-slate-500 hover:text-purple-600 transition-colors group"
             >
-              <Github size={16} className="text-purple-500 flex-shrink-0" />
+              <Github size={16} className="text-slate-400 group-hover:text-purple-600 flex-shrink-0" />
               <span>GitHub</span>
             </a>
           )}
@@ -97,9 +97,9 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
               href={demoUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs md:text-sm text-slate-600 hover:text-purple-600 transition-colors"
+              className="flex items-center gap-2 text-xs md:text-sm text-slate-500 hover:text-purple-600 transition-colors group"
             >
-              <ExternalLink size={16} className="text-purple-500 flex-shrink-0" />
+              <ExternalLink size={16} className="text-slate-400 group-hover:text-purple-600 flex-shrink-0" />
               <span>Demo</span>
             </a>
           )}

@@ -64,7 +64,7 @@ function MenuItem({ text, image, onClick }) {
 
   const repeatedMarqueeContent = Array.from({ length: 4 }).map((_, idx) => (
     <React.Fragment key={idx}>
-      <span className="text-purple-900 uppercase font-semibold text-xl lg:text-2xl leading-tight px-4">
+      <span className="text-violet-600 uppercase font-semibold text-xl lg:text-2xl leading-tight px-4">
         {text}
       </span>
       <div
@@ -80,7 +80,7 @@ function MenuItem({ text, image, onClick }) {
       ref={itemRef}
     >
       <p
-        className="flex items-center justify-center h-full relative cursor-pointer uppercase font-bold text-purple-800 text-lg lg:text-xl tracking-wide hover:text-purple-900 transition-colors px-4"
+        className="flex items-center justify-center h-full relative cursor-pointer uppercase font-bold text-violet-600 text-lg lg:text-xl tracking-wide hover:text-purple-900 transition-colors px-4"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={onClick}
@@ -93,7 +93,7 @@ function MenuItem({ text, image, onClick }) {
         className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none bg-gradient-to-b from-purple-50 to-white translate-y-[101%]"
         ref={marqueeRef}
       >
-        <div className="h-full w-[200%] flex" ref={marqueeInnerRef}>
+        <div className="h-full w-[300%] flex" ref={marqueeInnerRef}>
           <div className="flex items-center relative h-full w-[200%] will-change-transform animate-marquee">
             {repeatedMarqueeContent}
           </div>
