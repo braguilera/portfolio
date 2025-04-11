@@ -9,8 +9,6 @@
     }
     
     .hexagon-container {
-      width: 120px;
-      height: 120px;
       position: relative;
       margin: 0 auto;
       display: flex;
