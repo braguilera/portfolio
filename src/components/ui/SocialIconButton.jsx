@@ -2,9 +2,7 @@ import React from "react";
 import { motion } from 'framer-motion';
 
 const SocialIconButton = ({ icon: Icon, position, url, index, radius, isMobile, colorPalette }) => {
-  // Calculamos posiciones ajustadas según si es móvil o no
   const getPositions = () => {
-    // Reducimos la distancia en dispositivos móviles
     const adjustedRadius = isMobile ? radius * 0.85 : radius;
     
     return {
@@ -65,7 +63,7 @@ const SocialIconButton = ({ icon: Icon, position, url, index, radius, isMobile, 
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="absolute w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-white shadow-md flex items-center justify-center text-purple-600 hover:text-purple-800 border border-purple-100"
+      className="absolute w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-white shadow-md flex items-center justify-center text-purple-600 hover:text-purple-800 border border-purple-100 left-2 top-2 md:left-1 md:top-1"
       style={{
         background: colorPalette?.background || "white",
         borderColor: colorPalette?.border || "rgba(210, 190, 230, 0.5)",

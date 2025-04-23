@@ -6,16 +6,13 @@ import SocialIconButton from "./SocialIconButton"
 const ButtonSocial = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  // Radio adaptable según el tamaño de pantalla
   const radius = isMobile ? 55 : 65;
 
-  // Detectar si es un dispositivo móvil
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 640);
     };
     
-    // Comprobar al cargar y al cambiar el tamaño de la ventana
     checkMobile();
     window.addEventListener('resize', checkMobile);
     
@@ -68,9 +65,8 @@ const ButtonSocial = () => {
   };
 
   return (
-    <div className={`fixed bottom-20 z-50 ${isMobile ? 'right-10' : 'left-8 sm:left-16 md:left-28'}`}>
+    <div className={`fixed  z-50 ${isMobile ? 'right-14 bottom-14' : 'left-8 sm:left-18 bottom-20'}`}>
       <div className="w-12 h-12 sm:w-14 sm:h-14 relative">
-        {/* Efectos de onda en tonos coordinados */}
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
@@ -82,7 +78,6 @@ const ButtonSocial = () => {
           />
         ))}
 
-        {/* Botón principal con nueva paleta */}
         <motion.button
           className="absolute inset-0 rounded-full cursor-pointer flex items-center justify-center text-purple-700 z-20 backdrop-blur-lg border-2 border-purple-300"
           onClick={() => setIsOpen(!isOpen)}
@@ -108,7 +103,6 @@ const ButtonSocial = () => {
           </motion.div>
         </motion.button>
 
-        {/* Botones sociales con colores coordinados */}
         <AnimatePresence>
           {isOpen && socialButtons.map((button, index) => (
             <SocialIconButton
