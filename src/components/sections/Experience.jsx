@@ -159,7 +159,7 @@ const Experience = () => {
   ];
 
   return (
-    <section ref={containerRef} className='w-full min-h-screen py-12 md:py-24 flex flex-col items-center justify-start relative bg-violet-100'>
+    <section id="experience" ref={containerRef} className='w-full min-h-screen py-12 md:py-24 flex flex-col items-center justify-start relative bg-violet-100'>
       <div className="container mx-auto px-4">
         <SectionTitle title={'Experiencia'} />
         

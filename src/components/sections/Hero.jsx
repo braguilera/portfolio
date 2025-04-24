@@ -83,7 +83,7 @@ const Hero = () => {
   ]
   
   return (
-    <div className="h-[90vh] w-screen flex justify-center relative px-8 py-4 text-slate-700">
+    <div id="hero" className="h-[90vh] w-screen flex justify-center relative px-8 py-4 text-slate-700">
       <GeometricShapes />
       <ButtonSocial/>
 

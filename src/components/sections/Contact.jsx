@@ -101,6 +101,7 @@ const Contact = () => {
 
   return (
     <motion.footer
+      id="contact"
       className="relative w-full py-10 overflow-hidden"
       variants={containerVariants}
       initial="hidden"

@@ -84,7 +84,7 @@ const About = () => {
   ]
 
   return (
-    <section className="w-full py-12 md:py-24 px-4 md:px-6">
+    <section id="about" className="w-full py-12 md:py-24 px-4 md:px-6">
       <SectionTitle title={'Sobre Mí'}></SectionTitle>
       <div className="mx-auto max-w-5xl">
         <motion.div

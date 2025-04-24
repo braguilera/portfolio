@@ -12,8 +12,8 @@ import "boxicons/css/boxicons.min.css"
 function App() {
   return (
     <main className='bg-zinc-50 w-full h-auto relative overflow-x-hidden'>
-      <Nav/>
       <RetronBackground>
+        <Nav/>
         <Hero/>
         <Experience/>
         <Projects/>

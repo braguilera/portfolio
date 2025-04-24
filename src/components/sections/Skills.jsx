@@ -297,7 +297,7 @@ const Skills = () => {
   }
 
   return (
-    <section className="py-12 md:py-20 px-3 md:px-6 w-full min-h-screen bg-violet-100 flex flex-col items-center justify-center">
+    <section id="skills" className="py-12 md:py-20 px-3 md:px-6 w-full min-h-screen bg-violet-100 flex flex-col items-center justify-center">
       <div className="w-full max-w-6xl mx-auto">
         <SectionTitle title={'Habilidades'}></SectionTitle>
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>

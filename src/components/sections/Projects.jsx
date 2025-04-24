@@ -124,7 +124,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="min-h-screen w-full px-4 md:px-8 py-12 flex flex-col justify-center items-center">
+    <section id="projects" className="min-h-screen w-full px-4 md:px-8 py-12 flex flex-col justify-center items-center">
       <SectionTitle title={'Proyectos'}></SectionTitle>
 
       
