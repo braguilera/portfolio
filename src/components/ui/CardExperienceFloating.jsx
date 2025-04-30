@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import { motion, useMotionValue, animate } from "framer-motion"
+import { FolderDot, FolderOpenDot } from "lucide-react"
 
 const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
   const x = useMotionValue(position.initialX)
@@ -71,7 +72,14 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
         transition: { type: "spring" },
       }}
     >
-      <h3 className="text-lg font-bold text-purple-800 truncate">{project.title}</h3>
+
+      <h3 className="text-lg font-bold text-purple-800 truncate flex items-center gap-2">
+        {isExpanded 
+          ? <FolderOpenDot className="h-4 w-4 text-purple-800"></FolderOpenDot>
+          : <FolderDot className="h-4 w-4 text-purple-800"></FolderDot>
+        }
+        {project.title}
+      </h3>
 
       <motion.div
         className="overflow-hidden flex flex-col justify-between"

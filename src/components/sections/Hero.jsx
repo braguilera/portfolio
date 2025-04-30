@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, File } from "lucide-react"
 import GeometricShapes from "../ui/GeometricShapes"
 import CardExperienceFloating from "../ui/CardExperienceFloating"
 import BraianImg from "../../assets/images/Braian.png"
@@ -126,9 +126,10 @@ const Hero = () => {
         </motion.p>
 
         <motion.button
-          className="group flex w-fit cursor-pointer text-sm md:text-lg items-center space-x-2 rounded-full border border-purple-800/20 bg-purple-800/10 px-6 py-3 backdrop-blur-sm transition-all hover:bg-purple-800/20 text-purple-400 hover:text-purple-800/50"
+          className="group flex w-fit cursor-pointer text-sm md:text-lg items-center space-x-2 rounded-full border border-purple-800/20 bg-purple-600 px-4 py-2 backdrop-blur-sm transition-all hover:bg-purple-700 text-white"
           whileHover={{ scale: 1.05 }}
         >
+          <File className="h-4 w-4" />
           <span>Descargar CV</span>
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </motion.button>
