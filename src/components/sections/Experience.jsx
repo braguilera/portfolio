@@ -3,6 +3,7 @@ import { motion, useScroll } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CardExperience from '../ui/CardExperience';
 import SectionTitle from '../ui/SectionTitle';
+import experienciesJson from '../../assets/translations/experiencie.json'
 
 const TimelinePoint = ({ isInView }) => {
   return (
@@ -37,6 +38,7 @@ const TimelinePoint = ({ isInView }) => {
     </div>
   );
 };
+
 
 // Timeline item component
 const TimelineItem = ({ data, index }) => {
@@ -119,44 +121,7 @@ const Experience = () => {
     offset: ["5% 80%", "end end"]
   });
 
-  const experiences = [
-    {
-      title: "Senior Frontend Developer",
-      company: "Tech Solutions Inc.",
-      date: "2023 - Presente",
-      description: "Desarrollo de aplicaciones web modernas con React y NextJS. Implementación de arquitecturas escalables y optimización de rendimiento. Liderazgo técnico de un equipo de 5 desarrolladores.",
-      technologies: ["React", "NextJS", "TypeScript", "Tailwind CSS", "GraphQL"],
-      githubUrl: "https://github.com/user/project1",
-      demoUrl: "https://demo-project1.com",
-      backgroundImage: "/api/placeholder/400/250"
-    },
-    {
-      title: "Desarrollador Full Stack",
-      company: "Digital Innovations",
-      date: "2021 - 2023",
-      description: "Desarrollo y mantenimiento de aplicaciones web empresariales. Creación de APIs RESTful y optimización de bases de datos. Implementación de sistemas de autenticación y autorización.",
-      technologies: ["Vue.js", "Node.js", "Express", "MongoDB", "Docker"],
-      githubUrl: "https://github.com/user/project2",
-      backgroundImage: "/api/placeholder/400/250"
-    },
-    {
-      title: "Frontend Developer",
-      company: "Creative Web Agency",
-      date: "2019 - 2021",
-      description: "Desarrollo de sitios web interactivos para clientes de diversos sectores. Implementación de diseños responsive y optimización para SEO. Colaboración con diseñadores UX/UI.",
-      technologies: ["JavaScript", "SASS", "Webpack", "jQuery", "WordPress"],
-      demoUrl: "https://demo-project3.com",
-      backgroundImage: "/api/placeholder/400/250"
-    },
-    {
-      title: "Desarrollador Jr.",
-      company: "Startup Technologies",
-      date: "2018 - 2019",
-      description: "Desarrollo de prototipos y MVPs para startups tecnológicas. Implementación de funcionalidades frontend y backend básicas. Participación en reuniones de planificación y revisión.",
-      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      backgroundImage: "/api/placeholder/400/250"
-    }
-  ];
+  const experiences = experienciesJson;
 
   return (
     <section id="experience" ref={containerRef} className='w-full min-h-screen py-12 md:py-24 flex flex-col items-center justify-start relative bg-violet-100'>

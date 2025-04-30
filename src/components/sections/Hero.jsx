@@ -6,50 +6,12 @@ import CardExperienceFloating from "../ui/CardExperienceFloating"
 import BraianImg from "../../assets/images/Braian.png"
 import ButtonSocial from "../ui/ButtonSocial"
 import RotatingText from "../ui/RotatingText"
+import projectsJson from '../../assets/translations/projects.json'
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false)
 
-  const projectsData = [
-    {
-      title: "Frontend Project",
-      description: " web application  web application  web application  web application  web application",
-      technologies: [
-        { name: "React", icon: "react-icon" },
-        { name: "Tailwind", icon: "tailwind-icon" },
-      ],
-      githubLink: "https://github.com/username/project",
-      websiteLink: "https://project-demo.com",
-    },
-    {
-      title: "Backend Project",
-      description: "Scalable server infrastructure",
-      technologies: [
-        { name: "Node.js", icon: "nodejs-icon" },
-        { name: "Express", icon: "express-icon" },
-      ],
-      githubLink: "https://github.com/username/backend-project",
-    },
-    {
-      title: "Full Stack App",
-      description: "Complete web solution",
-      technologies: [
-        { name: "React", icon: "react-icon" },
-        { name: "MongoDB", icon: "mongodb-icon" },
-      ],
-      githubLink: "https://github.com/username/fullstack-project",
-      websiteLink: "https://fullstack-demo.com",
-    },
-    {
-      title: "Mobile App",
-      description: "Cross-platform mobile application",
-      technologies: [
-        { name: "React Native", icon: "react-native-icon" },
-        { name: "Firebase", icon: "firebase-icon" },
-      ],
-      githubLink: "https://github.com/username/mobile-app",
-    },
-  ]
+  const projectsData = projectsJson;
 
   const cardPositions = [
     {

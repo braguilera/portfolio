@@ -4,6 +4,7 @@ import FlowingMenu from "../ui/FlowingMenu";
 import { motion, AnimatePresence } from 'framer-motion';
 import CardProjects from "../ui/CardProjects";
 import SectionTitle from '../ui/SectionTitle';
+import projectsJson from '../../assets/translations/projects.json'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -21,92 +22,7 @@ const Projects = () => {
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
   
-  const projectsData = [
-    {
-      title: "Frontend Project",
-      description: "Advanced web application with responsive design and modern UI components, providing an excellent user experience across all devices.",
-      technologies: [
-        { name: "React", icon: "react-icon" },
-        { name: "Tailwind", icon: "tailwind-icon" },
-      ],
-      githubLink: "https://github.com/username/project",
-      websiteLink: "https://project-demo.com",
-      image: 'https://picsum.photos/600/400?random=1'
-    },
-    {
-      title: "Backend Project",
-      description: "Scalable server infrastructure built with performance in mind, supporting high traffic and complex data operations.",
-      technologies: [
-        { name: "Node.js", icon: "nodejs-icon" },
-        { name: "Express", icon: "express-icon" },
-      ],
-      githubLink: "https://github.com/username/backend-project",
-      image: 'https://picsum.photos/600/400?random=2'
-    },
-    {
-      title: "Full Stack App",
-      description: "Complete web solution integrating frontend and backend technologies for a seamless application experience.",
-      technologies: [
-        { name: "React", icon: "react-icon" },
-        { name: "MongoDB", icon: "mongodb-icon" },
-      ],
-      githubLink: "https://github.com/username/fullstack-project",
-      websiteLink: "https://fullstack-demo.com",
-      image: 'https://picsum.photos/600/400?random=3'
-    },
-    {
-      title: "Mobile App",
-      description: "Cross-platform mobile application designed for both iOS and Android, with native-like performance and beautiful UI.",
-      technologies: [
-        { name: "React Native", icon: "react-native-icon" },
-        { name: "Firebase", icon: "firebase-icon" },
-      ],
-      githubLink: "https://github.com/username/mobile-app",
-      image: 'https://picsum.photos/600/400?random=4'
-    },
-        {
-      title: "Frontend Project",
-      description: "Advanced web application with responsive design and modern UI components, providing an excellent user experience across all devices.",
-      technologies: [
-        { name: "React", icon: "react-icon" },
-        { name: "Tailwind", icon: "tailwind-icon" },
-      ],
-      githubLink: "https://github.com/username/project",
-      websiteLink: "https://project-demo.com",
-      image: 'https://picsum.photos/600/400?random=1'
-    },
-    {
-      title: "Backend Project",
-      description: "Scalable server infrastructure built with performance in mind, supporting high traffic and complex data operations.",
-      technologies: [
-        { name: "Node.js", icon: "nodejs-icon" },
-        { name: "Express", icon: "express-icon" },
-      ],
-      githubLink: "https://github.com/username/backend-project",
-      image: 'https://picsum.photos/600/400?random=2'
-    },
-    {
-      title: "Full Stack App",
-      description: "Complete web solution integrating frontend and backend technologies for a seamless application experience.",
-      technologies: [
-        { name: "React", icon: "react-icon" },
-        { name: "MongoDB", icon: "mongodb-icon" },
-      ],
-      githubLink: "https://github.com/username/fullstack-project",
-      websiteLink: "https://fullstack-demo.com",
-      image: 'https://picsum.photos/600/400?random=3'
-    },
-    {
-      title: "Mobile App",
-      description: "Cross-platform mobile application designed for both iOS and Android, with native-like performance and beautiful UI.",
-      technologies: [
-        { name: "React Native", icon: "react-native-icon" },
-        { name: "Firebase", icon: "firebase-icon" },
-      ],
-      githubLink: "https://github.com/username/mobile-app",
-      image: 'https://picsum.photos/600/400?random=4'
-    },
-  ];
+  const projectsData = projectsJson;
 
   const demoItems = projectsData.map(project => ({
     text: project.title,

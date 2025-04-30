@@ -118,7 +118,6 @@ const Nav = () => {
             variants={navVariants}
         >
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-                {/* Logo */}
                 <motion.a
                     href="#hero"
                     className="group flex items-center gap-2"
@@ -137,7 +136,6 @@ const Nav = () => {
                     </div>
                 </motion.a>
 
-                {/* Menú de navegación para pantallas grandes */}
                 <div className={isScrolled ? "hidden md:flex items-center gap-1" : "hidden md:flex items-center gap-1 "}>
                     <div className={isScrolled ? "bg-white rounded-full p-1 flex items-center" : "bg-white rounded-full p-1 flex items-center"}>
                         <AnimatePresence>
@@ -185,7 +183,6 @@ const Nav = () => {
                     </div>
                 </div>
 
-                {/* Botón de Descargar CV */}
                 <div className="hidden md:flex items-center">
                     <motion.a
                         href="/cv-braian-aguilera.pdf"
@@ -200,7 +197,6 @@ const Nav = () => {
                     </motion.a>
                 </div>
 
-                {/* Botón del menú móvil */}
                 <motion.button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     className="md:hidden h-9 w-9 rounded-full flex items-center justify-center bg-purple-50 border border-purple-100 text-purple-600 shadow-sm"
@@ -215,7 +211,6 @@ const Nav = () => {
                 </motion.button>
             </div>
 
-            {/* Menú móvil con animación */}
             <motion.div
                 className="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 border-l border-purple-100"
                 initial={{ x: '100%' }}
@@ -228,7 +223,6 @@ const Nav = () => {
             >
                 <div className="p-6 flex flex-col justify-between h-full">
                     <div>
-                        {/* Encabezado del menú móvil con el botón de cerrar */}
                         <div className="flex items-center justify-between mb-6">
                             <motion.div
                                 initial={{ opacity: 0, x: -10 }}
@@ -252,7 +246,6 @@ const Nav = () => {
                             </motion.button>
                         </div>
 
-                        {/* Línea separadora */}
                         <motion.div
                             className="h-px w-full bg-purple-100 mb-6"
                             initial={{ scaleX: 0 }}
@@ -260,7 +253,6 @@ const Nav = () => {
                             transition={{ delay: 0.3 }}
                         />
 
-                        {/* Enlaces de navegación para móvil */}
                         <div className="flex flex-col gap-1">
                             <AnimatePresence>
                                 {navLinks.map((link, i) => (
@@ -292,9 +284,7 @@ const Nav = () => {
                         </div>
                     </div>
 
-                    {/* Botones de redes sociales para móvil */}
                     <div>
-                        {/* Línea separadora */}
                         <motion.div
                             className="h-px w-full bg-purple-100 mb-6"
                             initial={{ scaleX: 0 }}

@@ -1,0 +1,58 @@
+[
+    {
+      "title": "Gestor Clínica Médica",
+      "description": "Gestos clinica",
+      "technologies": [
+        { "name": "React", "icon": "react-icon" },
+        { "name": "Tailwind", "icon": "tailwind-icon" }
+      ],
+      "githubLink": "https://github.com/braguilera/PokeGuess",
+      "websiteLink": "https://poke-guess-chi.vercel.app/",
+      "backgroundImage": "/api/placeholder/400/250"
+    },
+    {
+        "title": "PokeGuess",
+        "description": "Juego interactivo para practicar el uso de APIs públicas, desarrollado con React y Tailwind. El usuario debe adivinar un Pokémon viendo solo su silueta negra, con opciones como un modo de ayuda y un sistema de puntuación y streak. Al acertar, se muestran estadísticas y animaciones visuales que mejoran la experiencia. Inspirado en la Pokédex, incluye un diseño inmersivo y es completamente responsive.",
+        "technologies": [
+          { "name": "React", "icon": "react-icon" },
+          { "name": "Tailwind", "icon": "tailwind-icon" }
+        ],
+        "githubLink": "https://github.com/braguilera/PokeGuess",
+        "websiteLink": "https://poke-guess-chi.vercel.app/",
+        "backgroundImage": "/api/placeholder/400/250"
+      },
+    {
+      "title": "Gestor Consorcio",
+      "description": "Proyecto grupal universitario con enfoque en gestión de consorcios. Diseñé y desarrollé el frontend usando React, con un diseño UX optimizado y animaciones interactivas. Implementé el backend con Java y SQL Server, resolviendo el desafío de eliminación en cascada en la base de datos. La aplicación incluye un sistema de roles (inquilinos, dueños, empleados) con acceso específico mediante ruteo dinámico y presentación de datos tipo tabla usando React y CSS.",
+      "technologies": [
+        { "name": "React", "icon": "react-icon" },
+        { "name": "CSS", "icon": "css-icon" }
+      ],
+      "githubLink": "https://github.com/braguilera/Pagina_consorcio",
+      "websiteLink": "https://pagina-consorcio.vercel.app/login",
+      "backgroundImage": "/api/placeholder/400/250"
+    },
+    {
+      "title": "Portafolio Dot Dager",
+      "description": "Landing page creada en un concurso de tres días para un creador de contenido. Fui responsable de representar su humor, estilo y personalidad a través de un diseño interactivo, con animaciones fluidas en secciones clave. Incluye enlaces a sus redes sociales, una galería de videos y una sección de su juego favorito. Utilicé HTML, CSS y JavaScript.",
+      "technologies": [
+        { "name": "HTML", "icon": "html-icon" },
+        { "name": "CSS", "icon": "css-icon" },
+        { "name": "JavaScript", "icon": "javascript-icon" }
+      ],
+      "githubLink": "https://github.com/braguilera/portfolio_DotDager",
+      "websiteLink": "https://braguilera.github.io/portfolio_DotDager/",
+      "backgroundImage": "/api/placeholder/400/250"
+    },
+    {
+      "title": "Adivina el número",
+      "description": "Juego lógico realizado en React y CSS, donde el objetivo es adivinar un número secreto en 10 intentos. El juego utiliza un teclado interactivo para ingresar combinaciones y proporciona pistas sobre los números en la posición correcta, incorrecta o que forman parte del número. Con niveles de dificultad jugando con o sin números repetidos, este proyecto me permitió aprender sobre animaciones, manejo de datos entre componentes y lógica condicional en React.",
+      "technologies": [
+        { "name": "React", "icon": "react-icon" },
+        { "name": "CSS", "icon": "css-icon" }
+      ],
+      "githubLink": "https://github.com/braguilera/juego-numeros",
+      "websiteLink": "https://juego-numeros-jade.vercel.app/",
+      "backgroundImage": "/api/placeholder/400/250"
+    }
+  ]
