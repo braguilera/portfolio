@@ -8,7 +8,7 @@
       ],
       "githubLink": "https://github.com/braguilera/hackacode-3-frontend",
       "websiteLink": "https://hackacode-3-frontend.vercel.app/",
-      "backgroundImage": "./src/assets/images/braian.png"
+      "backgroundImage": "./src/assets/images/flowMenu/gestor_clinica_desktop.png"
     },
     {
         "title": "PokeGuess",
@@ -19,7 +19,7 @@
         ],
         "githubLink": "https://github.com/braguilera/PokeGuess",
         "websiteLink": "https://poke-guess-chi.vercel.app/",
-        "backgroundImage": "/api/placeholder/400/250"
+        "backgroundImage": "./src/assets/images/flowMenu/PokeGuess_desktop.png"
       },
     {
       "title": "Gestor Consorcio",
@@ -30,7 +30,7 @@
       ],
       "githubLink": "https://github.com/braguilera/Pagina_consorcio",
       "websiteLink": "https://pagina-consorcio.vercel.app/login",
-      "backgroundImage": "/api/placeholder/400/250"
+      "backgroundImage": "./src/assets/images/flowMenu/gestor_consorcio.png"
     },
     {
       "title": "Portafolio Dot Dager",
@@ -42,7 +42,7 @@
       ],
       "githubLink": "https://github.com/braguilera/portfolio_DotDager",
       "websiteLink": "https://braguilera.github.io/portfolio_DotDager/",
-      "backgroundImage": "/api/placeholder/400/250"
+      "backgroundImage": "./src/assets/images/flowMenu/dot_dager_landing.png"
     },
     {
       "title": "Adivina el número",
@@ -53,6 +53,6 @@
       ],
       "githubLink": "https://github.com/braguilera/juego-numeros",
       "websiteLink": "https://juego-numeros-jade.vercel.app/",
-      "backgroundImage": "/api/placeholder/400/250"
+      "backgroundImage": "./src/assets/images/flowMenu/adivina_numero_dark.png"
     }
   ]
