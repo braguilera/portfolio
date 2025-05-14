@@ -64,7 +64,7 @@ function MenuItem({ text, image, onClick }) {
 
   const repeatedMarqueeContent = Array.from({ length: 4 }).map((_, idx) => (
     <React.Fragment key={idx}>
-      <span className="text-violet-600 uppercase font-semibold text-xl lg:text-2xl leading-tight px-4">
+      <span className="text-violet-600 uppercase font-semibold text-lg lg:text-xl leading-tight px-4">
         {text}
       </span>
       <div

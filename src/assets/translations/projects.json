@@ -1,18 +1,18 @@
 [
     {
       "title": "Gestor Clínica Médica",
-      "description": "Gestos clinica",
+      "description": "Gestor Clínico es una aplicación web para la administración de clínicas que facilita la gestión de consultas, pacientes, médicos, servicios y facturación. Centraliza las operaciones desde el registro hasta la programación de citas, gestión de servicios y facturación, calculando ganancias y generando reportes y recibos en PDF.",
       "technologies": [
         { "name": "React", "icon": "react-icon" },
         { "name": "Tailwind", "icon": "tailwind-icon" }
       ],
-      "githubLink": "https://github.com/braguilera/PokeGuess",
-      "websiteLink": "https://poke-guess-chi.vercel.app/",
-      "backgroundImage": "/api/placeholder/400/250"
+      "githubLink": "https://github.com/braguilera/hackacode-3-frontend",
+      "websiteLink": "https://hackacode-3-frontend.vercel.app/",
+      "backgroundImage": "./src/assets/images/braian.png"
     },
     {
         "title": "PokeGuess",
-        "description": "Juego interactivo para practicar el uso de APIs públicas, desarrollado con React y Tailwind. El usuario debe adivinar un Pokémon viendo solo su silueta negra, con opciones como un modo de ayuda y un sistema de puntuación y streak. Al acertar, se muestran estadísticas y animaciones visuales que mejoran la experiencia. Inspirado en la Pokédex, incluye un diseño inmersivo y es completamente responsive.",
+        "description": "Juego interactivo desarrollado con React y Tailwind para practicar el uso de APIs públicas y adivinar Pokémons a partir de sus siluetas. Incluye opciones de ayuda, sistema de puntuación y animaciones.",
         "technologies": [
           { "name": "React", "icon": "react-icon" },
           { "name": "Tailwind", "icon": "tailwind-icon" }
@@ -23,7 +23,7 @@
       },
     {
       "title": "Gestor Consorcio",
-      "description": "Proyecto grupal universitario con enfoque en gestión de consorcios. Diseñé y desarrollé el frontend usando React, con un diseño UX optimizado y animaciones interactivas. Implementé el backend con Java y SQL Server, resolviendo el desafío de eliminación en cascada en la base de datos. La aplicación incluye un sistema de roles (inquilinos, dueños, empleados) con acceso específico mediante ruteo dinámico y presentación de datos tipo tabla usando React y CSS.",
+      "description": "Aplicación web para la gestión de consorcios que permite a los administradores gestionar quejas de dueños e inquilinos, crear y administrar inquilinos, dueños, edificios y unidades,  mediante operaciones CRUD. Desarrollada con React, incluye diseño UX y animaciones e implementa un backend con Java y SQL Server.",
       "technologies": [
         { "name": "React", "icon": "react-icon" },
         { "name": "CSS", "icon": "css-icon" }
@@ -34,7 +34,7 @@
     },
     {
       "title": "Portafolio Dot Dager",
-      "description": "Landing page creada en un concurso de tres días para un creador de contenido. Fui responsable de representar su humor, estilo y personalidad a través de un diseño interactivo, con animaciones fluidas en secciones clave. Incluye enlaces a sus redes sociales, una galería de videos y una sección de su juego favorito. Utilicé HTML, CSS y JavaScript.",
+      "description": "Landing page interactiva creada en un concurso de tres días para un creador de contenido. Destaca su humor, estilo y personalidad a través de un diseño interactivo con animaciones fluidas.",
       "technologies": [
         { "name": "HTML", "icon": "html-icon" },
         { "name": "CSS", "icon": "css-icon" },
@@ -46,7 +46,7 @@
     },
     {
       "title": "Adivina el número",
-      "description": "Juego lógico realizado en React y CSS, donde el objetivo es adivinar un número secreto en 10 intentos. El juego utiliza un teclado interactivo para ingresar combinaciones y proporciona pistas sobre los números en la posición correcta, incorrecta o que forman parte del número. Con niveles de dificultad jugando con o sin números repetidos, este proyecto me permitió aprender sobre animaciones, manejo de datos entre componentes y lógica condicional en React.",
+      "description": "Juego lógico en React y CSS para adivinar un número secreto en 10 intentos, utilizando un teclado interactivo y proporcionando pistas sobre la posición de los números.",
       "technologies": [
         { "name": "React", "icon": "react-icon" },
         { "name": "CSS", "icon": "css-icon" }

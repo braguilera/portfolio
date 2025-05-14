@@ -9,7 +9,7 @@ const CardProjects = ({ project, isVisible = true }) => {
     technologies = [],
     githubLink,
     websiteLink,
-    image
+    backgroundImage
   } = project;
 
   // Spring animation configuration for smoother transitions
@@ -78,23 +78,21 @@ const CardProjects = ({ project, isVisible = true }) => {
       className="relative bg-white rounded-xl shadow-md h-full w-8/9 lg:w-full flex flex-col overflow-hidden"
       style={{ height: '500px', maxHeight: '500px' }}
     >
-      {/* Project Image - Left Side */}
-      {image && (
+      {backgroundImage && (
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ...springConfig, delay: 0.1 }}
-          className="w-full h-1/3 overflow-hidden"
+          className="w-full h-1/4 sm:h-1/3 overflow-hidden"
         >
           <img 
-            src={image} 
+            src={backgroundImage} 
             alt={title} 
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
           />
         </motion.div>
       )}
 
-      {/* Content - Right Side */}
       <div className="p-6 flex flex-col flex-grow w-full overflow-y-auto">
         <div className="flex items-center mb-4">
           <motion.div
@@ -106,7 +104,6 @@ const CardProjects = ({ project, isVisible = true }) => {
             <i className='bx bx-code-alt text-purple-500 text-xl'></i>
           </motion.div>
           
-          {/* Header with Title */}
           <motion.div 
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -116,7 +113,6 @@ const CardProjects = ({ project, isVisible = true }) => {
           </motion.div>
         </div>
 
-        {/* Purple line divider */}
         <motion.div 
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
@@ -124,23 +120,29 @@ const CardProjects = ({ project, isVisible = true }) => {
           className="w-full h-0.5 bg-purple-100 mb-4 origin-left"
         ></motion.div>
 
-        {/* Description */}
         <motion.p 
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ ...springConfig, delay: 0.3 }}
-          className="text-slate-600 leading-relaxed mb-2 h-32"
+          className="text-slate-600 leading-relaxed mb-2 h-30 overflow-auto"
         >
           {description}
         </motion.p>
 
-        {/* Technologies */}
-        {technologies?.length > 0 && (
+        
+
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ ...springConfig, delay: 0.5 }}
+          className="mt-auto flex gap-4 relative"
+        >
+          {technologies?.length > 0 && (
           <motion.div 
             initial={{ y: 15, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ ...springConfig, delay: 0.4 }}
-            className="mb-6"
+            className="mb-6 absolute -top-20"
           >
             <div className="flex items-center gap-2 mb-2">
               <i className='bx bx-code-alt text-purple-500 text-xl'></i>
@@ -167,15 +169,7 @@ const CardProjects = ({ project, isVisible = true }) => {
               ))}
             </div>
           </motion.div>
-        )}
-
-        {/* Links */}
-        <motion.div 
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ ...springConfig, delay: 0.5 }}
-          className="mt-auto flex gap-4"
-        >
+          )}
           {githubLink && (
             <a
               href={githubLink}

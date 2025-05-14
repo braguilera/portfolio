@@ -26,7 +26,7 @@ const Projects = () => {
 
   const demoItems = projectsData.map(project => ({
     text: project.title,
-    image: project.image
+    image: project.backgroundImage
   }));
 
   const handleProjectSelect = (projectTitle) => {
