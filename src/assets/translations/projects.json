@@ -8,7 +8,7 @@
       ],
       "githubLink": "https://github.com/braguilera/hackacode-3-frontend",
       "websiteLink": "https://hackacode-3-frontend.vercel.app/",
-      "backgroundImage": "../../public/images/flowMenu/gestor_clinica_desktop.png"
+      "backgroundImage": "../../../public/images/flowMenu/gestor_clinica_desktop.png"
     },
     {
         "title": "PokeGuess",

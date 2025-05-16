@@ -28,13 +28,15 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
     return iconMap[techName] || <i className='bx bx-code text-purple-600 text-lg'></i>;
   };
 
+  const image = backgroundImage; 
+
   return (
     <article className="relative overflow-hidden rounded-xl shadow-lg border border-purple-100 transition-all duration-300 bg-white h-full">
       <div className="absolute inset-0 z-0">
         {backgroundImage && (
           <div className="w-full h-full">
             <img 
-              src={backgroundImage} 
+              src={image} 
               alt={`${title} at ${company}`} 
               className="w-full h-full object-cover opacity-10"
             />
