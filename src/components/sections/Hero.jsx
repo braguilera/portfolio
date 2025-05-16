@@ -7,6 +7,7 @@ import BraianImg from "../../assets/images/Braian.png"
 import ButtonSocial from "../ui/ButtonSocial"
 import RotatingText from "../ui/RotatingText"
 import projectsJson from '../../assets/translations/projects.json'
+import cvRuta from '../../../public/CV-Aguilera-Braian-Alejandro.pdf'
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false)
@@ -87,14 +88,21 @@ const Hero = () => {
           Especializado en crear aplicaciones web modernas y soluciones digitales eficientes.
         </motion.p>
 
-        <motion.button
-          className="group flex w-fit cursor-pointer text-sm md:text-lg items-center space-x-2 rounded-full border border-purple-800/20 bg-purple-600 px-4 py-2 backdrop-blur-sm transition-all hover:bg-purple-700 text-white"
-          whileHover={{ scale: 1.05 }}
+        <a
+          href={cvRuta}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <File className="h-4 w-4" />
-          <span>Descargar CV</span>
-          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-        </motion.button>
+          <motion.button
+            className="group flex w-fit cursor-pointer text-sm md:text-lg items-center space-x-2 rounded-full border border-purple-800/20 bg-purple-600 px-4 py-2 backdrop-blur-sm transition-all hover:bg-purple-700 text-white"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <File className="h-4 w-4" />
+            <span>Descargar CV</span>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </motion.button>
+        </a>
       </div>
 
       <div className="hidden md:flex-1 absolute -bottom-10 right-60 lg:right-80 z-10 md:flex items-center justify-center h-96">

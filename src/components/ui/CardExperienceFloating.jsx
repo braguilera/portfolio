@@ -34,15 +34,25 @@ const CardExperienceFloating = ({ project, position, isExpanded, index }) => {
 
   const getTechIcon = (techName) => {
     const iconMap = {
-      React: <i className='bx bxl-react text-purple-500 text-lg'></i>,
-      Tailwind: <i className='bx bxl-tailwind-css text-purple-500 text-lg' ></i>,
-      "Node.js": <i className='bx bx-server text-purple-500 text-lg'></i>,
-      Express: <i className='bx bx-network-chart text-purple-500 text-lg'></i>,
-      MongoDB: <i className='bx bx-data text-purple-500 text-lg'></i>,
-      "React Native": <i className='bx bx-mobile-alt text-purple-500 text-lg'></i>,
-      Firebase: <i className='bx bx-cloud text-purple-500 text-lg'></i>,
-      GraphQL: <i className='bx bx-shape-circle text-purple-500 text-lg'></i>,
-      TypeScript: <i className='bx bx-code-curly text-purple-500 text-lg'></i>
+      React: <i className='bx bxl-react text-purple-600 text-lg'></i>,
+      NextJS: <i className='bx bx-code-alt text-purple-600 text-lg'></i>,
+      TypeScript: <i className='bx bxl-typescript text-purple-600 text-lg'></i>,
+      Tailwind: <i className='bx bxl-tailwind-css text-purple-600 text-lg'></i>,
+      GraphQL: <i className='bx bx-data text-purple-600 text-lg'></i>,
+      'Vue.js': <i className='bx bxl-vuejs text-purple-600 text-lg'></i>,
+      'Node.js': <i className='bx bxl-nodejs text-purple-600 text-lg'></i>,
+      Express: <i className='bx bx-network-chart text-purple-600 text-lg'></i>,
+      MongoDB: <i className='bx bxl-mongodb text-purple-600 text-lg'></i>,
+      Docker: <i className='bx bxl-docker text-purple-600 text-lg'></i>,
+      JavaScript: <i className='bx bxl-javascript text-purple-600 text-lg'></i>,
+      SASS: <i className='bx bxl-sass text-purple-600 text-lg'></i>,
+      Webpack: <i className='bx bx-package text-purple-600 text-lg'></i>,
+      jQuery: <i className='bx bx-code-curly text-purple-600 text-lg'></i>,
+      WordPress: <i className='bx bxl-wordpress text-purple-600 text-lg'></i>,
+      HTML: <i className='bx bxl-html5 text-purple-600 text-lg'></i>,
+      CSS: <i className='bx bxl-css3 text-purple-600 text-lg'></i>,
+      PHP: <i className='bx bxl-php text-purple-600 text-lg'></i>,
+      MySQL: <i className='bx bx-data text-purple-600 text-lg'></i>
     }
 
     return iconMap[techName] || <i className='bx bx-code text-purple-100 text-lg'></i>

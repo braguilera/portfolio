@@ -12,7 +12,6 @@ const CardProjects = ({ project, isVisible = true }) => {
     backgroundImage
   } = project;
 
-  // Spring animation configuration for smoother transitions
   const springConfig = {
     type: "spring",
     stiffness: 300,
@@ -31,7 +30,7 @@ const CardProjects = ({ project, isVisible = true }) => {
       Firebase: <i className='bx bxl-firebase text-purple-600 text-lg'></i>,
       NextJS: <i className='bx bx-code-alt text-purple-600 text-lg'></i>,
       TypeScript: <i className='bx bxl-typescript text-purple-600 text-lg'></i>,
-      'Tailwind CSS': <i className='bx bx-palette text-purple-600 text-lg'></i>,
+      Tailwind: <i className='bx bxl-tailwind-css text-purple-600 text-lg'></i>,
       GraphQL: <i className='bx bx-data text-purple-600 text-lg'></i>,
       'Vue.js': <i className='bx bxl-vuejs text-purple-600 text-lg'></i>,
       Docker: <i className='bx bxl-docker text-purple-600 text-lg'></i>,

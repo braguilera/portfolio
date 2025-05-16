@@ -22,10 +22,10 @@ const ButtonSocial = () => {
   }, []);
 
   const socialButtons = [
-    { icon: Phone, position: 'top', url: 'tel:+123456789' },
-    { icon: Mail, position: 'right', url: 'mailto:contact@example.com' },
-    { icon: Linkedin, position: 'bottom', url: 'https://linkedin.com' },
-    { icon: Github, position: 'left', url: 'https://github.com' }
+    { icon: Phone, position: 'top', url: 'tel:+541137763097' },
+    { icon: Mail, position: 'right', url: 'mailto:braaguileraa@gmail.com' },
+    { icon: Linkedin, position: 'bottom', url: 'https://www.linkedin.com/in/braianalejandroaguilera1/' },
+    { icon: Github, position: 'left', url: 'https://github.com/braguilera' }
   ];
 
   const mainButtonVariants = {
@@ -65,7 +65,7 @@ const ButtonSocial = () => {
   };
 
   return (
-    <div className={`fixed  z-50 ${isMobile ? 'right-14 bottom-14' : 'left-8 sm:left-18 bottom-20'}`}>
+    <div className={`fixed  z-30 ${isMobile ? 'right-14 bottom-14' : 'left-8 sm:left-18 bottom-20'}`}>
       <div className="w-12 h-12 sm:w-14 sm:h-14 relative">
         {[0, 1, 2].map((i) => (
           <motion.div

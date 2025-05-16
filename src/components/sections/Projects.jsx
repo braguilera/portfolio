@@ -10,7 +10,6 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   
-  // Check screen size for responsive layout
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 1024);
@@ -42,16 +41,6 @@ const Projects = () => {
   return (
     <section id="projects" className="min-h-screen w-full px-4 md:px-8 py-12 flex flex-col justify-center items-center">
       <SectionTitle title={'Proyectos'}></SectionTitle>
-
-      
-      <motion.p
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.1 }}
-        className="text-slate-600 max-w-5xl mb-8 md:mb-12"
-      >
-        Selecciona un proyecto del menú interactivo para ver más detalles sobre las tecnologías utilizadas y acceder a demos o código fuente.
-      </motion.p>
       
       <main className="flex flex-col xl:flex-row justify-between items-center gap-4 w-7xl h-full">
         <motion.div 

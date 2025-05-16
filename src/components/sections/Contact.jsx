@@ -8,11 +8,10 @@ const Contact = () => {
   const [copiedItem, setCopiedItem] = useState(null)
 
   const contactData = {
-    email: "braian@example.com", 
-    phone: "+54 11 1234 5678", 
+    email: "braaguileraa@gmail.com", 
+    phone: "+541137763097", 
   }
 
-  // Resetear el estado de copiado después de 2 segundos
   useEffect(() => {
     if (copiedItem) {
       const timer = setTimeout(() => {
@@ -87,13 +86,13 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: <Linkedin className="h-5 w-5" />,
-      href: "https://linkedin.com/in/username",
+      href: "https://www.linkedin.com/in/braianalejandroaguilera1/",
       label: "LinkedIn",
       color: "bg-blue-600",
     },
     {
       icon: <Github className="h-5 w-5" />,
-      href: "https://github.com/username",
+      href: "https://github.com/braguilera",
       label: "GitHub",
       color: "bg-gray-800",
     },
@@ -210,7 +209,6 @@ const Contact = () => {
             ))}
           </motion.div>
 
-          {/* Línea decorativa mejorada */}
           <motion.div
             className="h-1 bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-500 rounded-full mb-6"
             variants={itemVariants}
@@ -227,7 +225,6 @@ const Contact = () => {
             viewport={{ once: true }}
           />
 
-          {/* Copyright */}
           <motion.div className="text-center text-gray-600 text-sm" variants={itemVariants}>
             <p className="flex items-center justify-center gap-1">
               © {new Date().getFullYear()} Braian Alejandro Aguilera.

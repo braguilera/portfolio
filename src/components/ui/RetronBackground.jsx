@@ -153,7 +153,6 @@ export default function RetronBackground({ children }) {
   )
 }
 
-// Componente Hexágono
 function Hexagon({ size, color, borderColor }) {
   return (
     <div

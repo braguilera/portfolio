@@ -5,7 +5,6 @@ import { Pen, Layout, Code, Smartphone, ChevronRight } from "lucide-react"
 import SectionTitle from "../ui/SectionTitle"
 
 const About = () => {
-  // Variantes para animaciones con efecto spring
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -44,7 +43,6 @@ const About = () => {
     }),
   }
 
-  // Icono para cada servicio
   const serviceIcons = {
     prototipado: <Pen className="h-5 w-5 text-purple-500" />,
     uxui: <Layout className="h-5 w-5 text-purple-500" />,
@@ -52,7 +50,6 @@ const About = () => {
     responsive: <Smartphone className="h-5 w-5 text-purple-500" />,
   }
 
-  // Datos de servicios
   const services = [
     {
       id: "prototipado",
@@ -94,7 +91,7 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {/* Columna izquierda con título y descripción */}
+          {/* Columna izquierda título y descripción */}
           <motion.div className="flex-1 md:mt-15" variants={itemVariants}>
 
             <motion.p className="text-base md:text-lg text-gray-700 mb-4 md:mb-6 leading-relaxed" variants={itemVariants}>
@@ -121,7 +118,7 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          {/* Columna derecha con servicios */}
+          {/* Columna derecha servicios */}
           <motion.div className="flex-1" variants={itemVariants}>
             <motion.h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-purple-900" variants={itemVariants}>
               Servicios

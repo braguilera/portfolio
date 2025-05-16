@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Github, Linkedin, Mail, Code, File, Building2, FolderGit2, Zap, User } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Code, File, Building2, FolderGit2, Zap, User, ArrowRight } from 'lucide-react';
+import cvRuta from '../../../public/CV-Aguilera-Braian-Alejandro.pdf'
+
 
 const navLinks = [
     { id: 'hero', label: 'Inicio', href: '#hero', icon: <Code className="h-4 w-4" /> },
@@ -12,9 +14,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-    { id: 'github', icon: Github, href: 'https://github.com/tuusuario', boxIcon: 'bx bxl-github' },
-    { id: 'linkedin', icon: Linkedin, href: 'https://www.linkedin.com/in/tuperfil', boxIcon: 'bx bxl-linkedin' },
-    { id: 'mail', icon: Mail, href: 'mailto:tuemail@ejemplo.com', boxIcon: 'bx bx-envelope' },
+    { id: 'github', icon: Github, href: 'https://github.com/braguilera', boxIcon: 'bx bxl-github' },
+    { id: 'linkedin', icon: Linkedin, href: 'https://www.linkedin.com/in/braianalejandroaguilera1/', boxIcon: 'bx bxl-linkedin' },
+    { id: 'mail', icon: Mail, href: 'mailto:braaguileraa@gmail.com', boxIcon: 'bx bx-envelope' },
 ];
 
 const Nav = () => {
@@ -117,7 +119,7 @@ const Nav = () => {
             animate="visible"
             variants={navVariants}
         >
-            <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div className="container mx-auto px-4 py-3 flex items-center justify-between z-50">
                 <motion.a
                     href="#hero"
                     className="group flex items-center gap-2"
@@ -184,17 +186,21 @@ const Nav = () => {
                 </div>
 
                 <div className="hidden md:flex items-center">
-                    <motion.a
-                        href="/cv-braian-aguilera.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2.5 rounded-full font-medium text-sm transition-colors duration-200 flex items-center gap-2 shadow-md hover:shadow-lg"
+                    <a
+                    href={cvRuta}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <motion.button
+                        className="group flex w-fit cursor-pointer text-sm md:text-lg items-center space-x-2 rounded-full border border-purple-800/20 bg-purple-600 px-4 py-2 backdrop-blur-sm transition-all hover:bg-purple-700 text-white"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
                         <File className="h-4 w-4" />
-                        Descargar CV
-                    </motion.a>
+                        <span>Descargar CV</span>
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </motion.button>
+                    </a>
                 </div>
 
                 <motion.button

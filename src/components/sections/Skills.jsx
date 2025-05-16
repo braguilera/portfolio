@@ -16,7 +16,6 @@ const Skills = () => {
     containerWidth: 650
   })
 
-  // Referencia al contenedor principal para centrar el panal
   const containerRef = useRef(null)
 
   useEffect(() => {
@@ -29,18 +28,15 @@ const Skills = () => {
   }, [])
 
   useEffect(() => {
-    // Ajustar tamaños basados en el ancho de la pantalla
     if (windowWidth < 640) {
-      // Móviles pequeños
       setHoneycombSize({
-        hexSize: 70, // Más pequeño para móvil
+        hexSize: 70, 
         hexSpacingX: 80,
         hexSpacingY: 60,
         containerHeight: 300,
         containerWidth: 300
       })
     } else if (windowWidth < 768) {
-      // Móviles y tablets pequeñas
       setHoneycombSize({
         hexSize: 70,
         hexSpacingX: 80,
@@ -49,7 +45,6 @@ const Skills = () => {
         containerWidth: 350
       })
     } else if (windowWidth < 1024) {
-      // Tablets
       setHoneycombSize({
         hexSize: 90,
         hexSpacingX: 100,
@@ -58,7 +53,6 @@ const Skills = () => {
         containerWidth: 425
       })
     } else {
-      // Desktop
       setHoneycombSize({
         hexSize: 120,
         hexSpacingX: 130,
@@ -103,16 +97,13 @@ const Skills = () => {
 
   const generateHoneycombLayout = (skillsArray) => {
     const positions = [
-      // Centro
       { row: 2, col: 2 },
-      // Primera capa (6 posiciones alrededor del centro)
       { row: 1, col: 1 },
       { row: 1, col: 2 },
       { row: 1, col: 3 },
       { row: 2, col: 1 },
       { row: 2, col: 3 },
       { row: 3, col: 2 },
-      // Segunda capa (12 posiciones)
       { row: 0, col: 1 },
       { row: 0, col: 2 },
       { row: 0, col: 3 },
@@ -127,18 +118,15 @@ const Skills = () => {
       { row: 4, col: 2 },
     ]
 
-    // Determinar cuántas skills mostrar según el tamaño de pantalla
     let maxSkills = skillsArray.length;
     if (windowWidth < 640) {
-      maxSkills = Math.min(7, skillsArray.length); // Limitar a 7 skills en móvil
+      maxSkills = Math.min(7, skillsArray.length); 
     } else if (windowWidth < 768) {
-      maxSkills = Math.min(10, skillsArray.length); // Limitar a 10 skills en tablets pequeñas
+      maxSkills = Math.min(10, skillsArray.length); 
     }
 
-    // Crear celdas para el panal
     const honeycomb = []
 
-    // Crear un mapa de posiciones ocupadas por skills
     const skillPositions = new Map();
     for (let i = 0; i < Math.min(maxSkills, positions.length); i++) {
       if (i < skillsArray.length) {
@@ -163,14 +151,11 @@ const Skills = () => {
           skillIndex = skillPositions.get(key);
         }
 
-        // Determinar si esta celda debe mostrarse como hexágono vacío
         const isPositionInArray = positions.some(pos => pos.row === row && pos.col === col);
         const isAdjacentToSkill = isPositionInArray && !skillPositions.has(key);
         
-        // En móvil, mostrar menos hexágonos vacíos
         let shouldShowEmpty = true;
         if (windowWidth < 640) {
-          // En móvil solo mostrar hexágonos vacíos que estén a distancia 1 de un skill
           const adjacentToSkill = [...skillPositions.keys()].some(skillPos => {
             const [skillRow, skillCol] = skillPos.split('-').map(Number);
             const directDistance = Math.max(
@@ -198,7 +183,6 @@ const Skills = () => {
 
     honeycomb.sort((a, b) => a.distance - b.distance);
 
-    // Calcular dimensiones para centrado
     let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
     
     honeycomb.forEach(cell => {
@@ -266,7 +250,6 @@ const Skills = () => {
           </motion.div>
         );
       } else if (cell.type === "empty" && cell.shouldShow) {
-        // Hexágono vacío
         return (
           <motion.div
             key={`cell-${index}`}
@@ -282,7 +265,7 @@ const Skills = () => {
       }
       
       return null;
-    }).filter(Boolean); // Eliminar elementos nulos
+    }).filter(Boolean);
   }
 
   const containerVariants = {

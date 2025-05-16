@@ -7,7 +7,7 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
       React: <i className='bx bxl-react text-purple-600 text-lg'></i>,
       NextJS: <i className='bx bx-code-alt text-purple-600 text-lg'></i>,
       TypeScript: <i className='bx bxl-typescript text-purple-600 text-lg'></i>,
-      'Tailwind CSS': <i className='bx bx-palette text-purple-600 text-lg'></i>,
+      Tailwind: <i className='bx bxl-tailwind-css text-purple-600 text-lg'></i>,
       GraphQL: <i className='bx bx-data text-purple-600 text-lg'></i>,
       'Vue.js': <i className='bx bxl-vuejs text-purple-600 text-lg'></i>,
       'Node.js': <i className='bx bxl-nodejs text-purple-600 text-lg'></i>,
@@ -58,7 +58,7 @@ const CardExperience = ({ title, company, date, description, technologies = [], 
           </div>
         </div>
 
-        <p className="text-sm md:text-base text-slate-600 mb-4 md:mb-6 line-clamp-3">{description}</p>
+        <p className="text-sm md:text-base text-slate-600 mb-4 md:mb-6 h-20 overflow-y-scroll sm:h-40 lg:h-auto lg:overflow-auto">{description}</p>
 
         {technologies.length > 0 && (
           <div className="mb-4 md:mb-6">

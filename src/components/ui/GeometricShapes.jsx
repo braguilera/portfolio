@@ -170,22 +170,20 @@ function HexagonPrism({ size, primaryColor, secondaryColor }) {
 function HexGrid() {
   return (
     <div className="relative">
-      {/* Hexágono central */}
       <div
         className="absolute"
         style={{
           width: "40px",
-          height: "34.64px", // 40 * 0.866
+          height: "34.64px", 
           clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
           backgroundColor: "rgba(124, 58, 237, 0.2)",
           border: "1px solid rgba(124, 58, 237, 0.4)",
           backdropFilter: "blur(5px)",
           left: "20px",
-          top: "17.32px", // 20 * 0.866
+          top: "17.32px", 
         }}
       />
 
-      {/* Hexágono superior */}
       <div
         className="absolute"
         style={{
@@ -200,7 +198,6 @@ function HexGrid() {
         }}
       />
 
-      {/* Hexágono derecho */}
       <div
         className="absolute"
         style={{
@@ -215,7 +212,6 @@ function HexGrid() {
         }}
       />
 
-      {/* Hexágono izquierdo-inferior (amarillo) */}
       <div
         className="absolute"
         style={{

@@ -40,7 +40,6 @@ const TimelinePoint = ({ isInView }) => {
 };
 
 
-// Timeline item component
 const TimelineItem = ({ data, index }) => {
   const isRight = index % 2 === 0;
   const [ref, inView] = useInView({
@@ -51,7 +50,6 @@ const TimelineItem = ({ data, index }) => {
 
   return (
     <div ref={ref} className="relative w-full flex flex-col md:h-auto md:my-12">
-      {/* Mobile view (vertical timeline) */}
       <div className="block md:hidden relative mb-6">
         <div className="flex items-start relative pl-16 pr-4 pb-6">
           <div className="absolute left-1 top-1/2 -translate-y-1/2 z-10">
@@ -69,7 +67,6 @@ const TimelineItem = ({ data, index }) => {
         </div>
       </div>
 
-      {/* Desktop view (alternating timeline) */}
       <div className="hidden md:block relative">
         <div className="relative flex items-center py-10">
           <div className="absolute left-1/2 -translate-x-1/2 z-10">
@@ -113,7 +110,6 @@ const TimelineItem = ({ data, index }) => {
   );
 };
 
-// Main Experience component
 const Experience = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -129,7 +125,6 @@ const Experience = () => {
         <SectionTitle title={'Experiencia'} />
         
         <div className="relative">
-          {/* Mobile timeline line - animated as you scroll */}
           <div className="block md:hidden absolute left-4 top-0 h-full w-0.5 bg-purple-300">
             <motion.div 
               className="absolute top-0 left-0 w-full bg-purple-600 origin-top"
@@ -141,7 +136,6 @@ const Experience = () => {
             />
           </div>
           
-          {/* Desktop timeline line - animated as you scroll */}
           <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 h-full w-0.5 bg-purple-200">
             <motion.div 
               className="absolute top-0 left-0 w-full bg-purple-600 origin-top"
