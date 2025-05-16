@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, File } from "lucide-react"
 import GeometricShapes from "../ui/GeometricShapes"
 import CardExperienceFloating from "../ui/CardExperienceFloating"
-import BraianImg from "../../assets/images/Braian.png"
+import BraianImg from "../../../public/images/Braian.png"
 import ButtonSocial from "../ui/ButtonSocial"
 import RotatingText from "../ui/RotatingText"
 import projectsJson from '../../assets/translations/projects.json'
