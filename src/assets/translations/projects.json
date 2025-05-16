@@ -30,7 +30,7 @@
       ],
       "githubLink": "https://github.com/braguilera/Pagina_consorcio",
       "websiteLink": "https://pagina-consorcio.vercel.app/login",
-      "backgroundImage": "./src/assets/images/flowMenu/gestor_consorcio.png"
+      "backgroundImage": "../../../public/images/flowMenu/gestor_consorcio.png"
     },
     {
       "title": "Portafolio Dot Dager",
@@ -42,7 +42,7 @@
       ],
       "githubLink": "https://github.com/braguilera/portfolio_DotDager",
       "websiteLink": "https://braguilera.github.io/portfolio_DotDager/",
-      "backgroundImage": "./src/assets/images/flowMenu/dot_dager_landing.png"
+      "backgroundImage": "../../../public/images/flowMenu/dot_dager_landing.png"
     },
     {
       "title": "Adivina el número",
@@ -53,6 +53,6 @@
       ],
       "githubLink": "https://github.com/braguilera/juego-numeros",
       "websiteLink": "https://juego-numeros-jade.vercel.app/",
-      "backgroundImage": "./src/assets/images/flowMenu/adivina_numero_dark.png"
+      "backgroundImage": "../../../public/images/flowMenu/adivina_numero_dark.png"
     }
   ]
