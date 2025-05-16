@@ -8,7 +8,7 @@
       ],
       "githubLink": "https://github.com/braguilera/hackacode-3-frontend",
       "websiteLink": "https://hackacode-3-frontend.vercel.app/",
-      "backgroundImage": "./src/assets/images/flowMenu/gestor_clinica_desktop.png"
+      "backgroundImage": "../../public/images/flowMenu/gestor_clinica_desktop.png"
     },
     {
         "title": "PokeGuess",
@@ -19,7 +19,7 @@
         ],
         "githubLink": "https://github.com/braguilera/PokeGuess",
         "websiteLink": "https://poke-guess-chi.vercel.app/",
-        "backgroundImage": "./src/assets/images/flowMenu/PokeGuess_desktop.png"
+        "backgroundImage": "../../../public/images/flowMenu/PokeGuess_desktop.png"
       },
     {
       "title": "Gestor Consorcio",
