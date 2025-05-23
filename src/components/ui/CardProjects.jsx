@@ -14,7 +14,7 @@ const CardProjects = ({ project, isVisible = true }) => {
     technologies = [],
     githubLink,
     websiteLink,
-    backgroundImage
+    imageKey
   } = project;
 
   const springConfig = {
@@ -90,7 +90,7 @@ const CardProjects = ({ project, isVisible = true }) => {
       className="relative bg-white rounded-xl shadow-md h-full w-8/9 lg:w-full flex flex-col overflow-hidden"
       style={{ height: '500px', maxHeight: '500px' }}
     >
-      {backgroundImage && (
+      {imageKey && (
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
