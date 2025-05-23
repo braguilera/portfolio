@@ -1,58 +1,58 @@
 [
-    {
-      "title": "Gestor Clínica Médica",
-      "description": "Gestor Clínico es una aplicación web para la administración de clínicas que facilita la gestión de consultas, pacientes, médicos, servicios y facturación. Centraliza las operaciones desde el registro hasta la programación de citas, gestión de servicios y facturación, calculando ganancias y generando reportes y recibos en PDF.",
-      "technologies": [
-        { "name": "React", "icon": "react-icon" },
-        { "name": "Tailwind", "icon": "tailwind-icon" }
-      ],
-      "githubLink": "https://github.com/braguilera/hackacode-3-frontend",
-      "websiteLink": "https://hackacode-3-frontend.vercel.app/",
-      "backgroundImage": "../../../public/images/flowMenu/gestor_clinica_desktop.png"
-    },
-    {
-        "title": "PokeGuess",
-        "description": "Juego interactivo desarrollado con React y Tailwind para practicar el uso de APIs públicas y adivinar Pokémons a partir de sus siluetas. Incluye opciones de ayuda, sistema de puntuación y animaciones.",
-        "technologies": [
-          { "name": "React", "icon": "react-icon" },
-          { "name": "Tailwind", "icon": "tailwind-icon" }
-        ],
-        "githubLink": "https://github.com/braguilera/PokeGuess",
-        "websiteLink": "https://poke-guess-chi.vercel.app/",
-        "backgroundImage": "../../../public/images/flowMenu/PokeGuess_desktop.png"
-      },
-    {
-      "title": "Gestor Consorcio",
-      "description": "Aplicación web para la gestión de consorcios que permite a los administradores gestionar quejas de dueños e inquilinos, crear y administrar inquilinos, dueños, edificios y unidades,  mediante operaciones CRUD. Desarrollada con React, incluye diseño UX y animaciones e implementa un backend con Java y SQL Server.",
-      "technologies": [
-        { "name": "React", "icon": "react-icon" },
-        { "name": "CSS", "icon": "css-icon" }
-      ],
-      "githubLink": "https://github.com/braguilera/Pagina_consorcio",
-      "websiteLink": "https://pagina-consorcio.vercel.app/login",
-      "backgroundImage": "../../../public/images/flowMenu/gestor_consorcio.png"
-    },
-    {
-      "title": "Portafolio Dot Dager",
-      "description": "Landing page interactiva creada en un concurso de tres días para un creador de contenido. Destaca su humor, estilo y personalidad a través de un diseño interactivo con animaciones fluidas.",
-      "technologies": [
-        { "name": "HTML", "icon": "html-icon" },
-        { "name": "CSS", "icon": "css-icon" },
-        { "name": "JavaScript", "icon": "javascript-icon" }
-      ],
-      "githubLink": "https://github.com/braguilera/portfolio_DotDager",
-      "websiteLink": "https://braguilera.github.io/portfolio_DotDager/",
-      "backgroundImage": "../../../public/images/flowMenu/dot_dager_landing.png"
-    },
-    {
-      "title": "Adivina el número",
-      "description": "Juego lógico en React y CSS para adivinar un número secreto en 10 intentos, utilizando un teclado interactivo y proporcionando pistas sobre la posición de los números.",
-      "technologies": [
-        { "name": "React", "icon": "react-icon" },
-        { "name": "CSS", "icon": "css-icon" }
-      ],
-      "githubLink": "https://github.com/braguilera/juego-numeros",
-      "websiteLink": "https://juego-numeros-jade.vercel.app/",
-      "backgroundImage": "../../../public/images/flowMenu/adivina_numero_dark.png"
-    }
-  ]
+  {
+    "title": "Gestor Clínica Médica",
+    "description": "Gestor Clínico es una aplicación web para la administración de clínicas que facilita la gestión de consultas, pacientes, médicos, servicios y facturación. Centraliza las operaciones desde el registro hasta la programación de citas, gestión de servicios y facturación, calculando ganancias y generando reportes y recibos en PDF.",
+    "technologies": [
+      { "name": "React", "icon": "react-icon" },
+      { "name": "Tailwind", "icon": "tailwind-icon" }
+    ],
+    "githubLink": "https://github.com/braguilera/hackacode-3-frontend",
+    "websiteLink": "https://hackacode-3-frontend.vercel.app/",
+    "imageKey": "gestorClinica"
+  },
+  {
+    "title": "PokeGuess",
+    "description": "Juego interactivo desarrollado con React y Tailwind para practicar el uso de APIs públicas y adivinar Pokémons a partir de sus siluetas. Incluye opciones de ayuda, sistema de puntuación y animaciones.",
+    "technologies": [
+      { "name": "React", "icon": "react-icon" },
+      { "name": "Tailwind", "icon": "tailwind-icon" }
+    ],
+    "githubLink": "https://github.com/braguilera/PokeGuess",
+    "websiteLink": "https://poke-guess-chi.vercel.app/",
+    "imageKey": "pokeGuess"
+  },
+  {
+    "title": "Gestor Consorcio",
+    "description": "Aplicación web para la gestión de consorcios que permite a los administradores gestionar quejas de dueños e inquilinos, crear y administrar inquilinos, dueños, edificios y unidades,  mediante operaciones CRUD. Desarrollada con React, incluye diseño UX y animaciones e implementa un backend con Java y SQL Server.",
+    "technologies": [
+      { "name": "React", "icon": "react-icon" },
+      { "name": "CSS", "icon": "css-icon" }
+    ],
+    "githubLink": "https://github.com/braguilera/Pagina_consorcio",
+    "websiteLink": "https://pagina-consorcio.vercel.app/login",
+    "imageKey": "gestorConsorcio"
+  },
+  {
+    "title": "Portafolio Dot Dager",
+    "description": "Landing page interactiva creada en un concurso de tres días para un creador de contenido. Destaca su humor, estilo y personalidad a través de un diseño interactivo con animaciones fluidas.",
+    "technologies": [
+      { "name": "HTML", "icon": "html-icon" },
+      { "name": "CSS", "icon": "css-icon" },
+      { "name": "JavaScript", "icon": "javascript-icon" }
+    ],
+    "githubLink": "https://github.com/braguilera/portfolio_DotDager",
+    "websiteLink": "https://braguilera.github.io/portfolio_DotDager/",
+    "imageKey": "dotDager"
+  },
+  {
+    "title": "Adivina el número",
+    "description": "Juego lógico en React y CSS para adivinar un número secreto en 10 intentos, utilizando un teclado interactivo y proporcionando pistas sobre la posición de los números.",
+    "technologies": [
+      { "name": "React", "icon": "react-icon" },
+      { "name": "CSS", "icon": "css-icon" }
+    ],
+    "githubLink": "https://github.com/braguilera/juego-numeros",
+    "websiteLink": "https://juego-numeros-jade.vercel.app/",
+    "imageKey": "adivinaNumero"
+  }
+]

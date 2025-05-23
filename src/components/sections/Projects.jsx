@@ -5,11 +5,26 @@ import { motion, AnimatePresence } from 'framer-motion';
 import CardProjects from "../ui/CardProjects";
 import SectionTitle from '../ui/SectionTitle';
 import projectsJson from '../../assets/translations/projects.json'
+import gestorClinica from '../../../public/images/flowMenu/gestor_clinica_desktop.png';
+import pokeGuess from '../../../public/images/flowMenu/PokeGuess_desktop.png';
+import gestorConsorcio from '../../../public/images/flowMenu/gestor_consorcio.png';
+import dotDager from '../../../public/images/flowMenu/dot_dager_landing.png';
+import adivinaNumero from '../../../public/images/flowMenu/adivina_numero_dark.png';
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   
+  const imageMap = {
+  gestorClinica,
+  pokeGuess,
+  gestorConsorcio,
+  dotDager,
+  adivinaNumero
+};
+
+
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 1024);
@@ -25,7 +40,7 @@ const Projects = () => {
 
   const demoItems = projectsData.map(project => ({
     text: project.title,
-    image: project.backgroundImage
+    image: imageMap[project.imageKey]
   }));
 
   const handleProjectSelect = (projectTitle) => {
