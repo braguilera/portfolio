@@ -1,6 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
+import gestorClinica from '../../../public/images/flowMenu/gestor_clinica_desktop.png';
+import pokeGuess from '../../../public/images/flowMenu/PokeGuess_desktop.png';
+import gestorConsorcio from '../../../public/images/flowMenu/gestor_consorcio.png';
+import dotDager from '../../../public/images/flowMenu/dot_dager_landing.png';
+import adivinaNumero from '../../../public/images/flowMenu/adivina_numero_dark.png';
 
 const CardProjects = ({ project, isVisible = true }) => {
   const {
@@ -18,6 +23,14 @@ const CardProjects = ({ project, isVisible = true }) => {
     damping: 20,
     mass: 0.8
   };
+    const imageMap = {
+    gestorClinica,
+    pokeGuess,
+    gestorConsorcio,
+    dotDager,
+    adivinaNumero
+  };
+  
 
   const getTechIcon = (techName) => {
     const iconMap = {
@@ -85,7 +98,7 @@ const CardProjects = ({ project, isVisible = true }) => {
           className="w-full h-1/4 sm:h-1/3 overflow-hidden"
         >
           <img 
-            src={backgroundImage} 
+            src={imageMap[project.imageKey]} 
             alt={title} 
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
           />
