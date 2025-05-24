@@ -75,23 +75,22 @@ const Skills = () => {
       { name: "CSS3", icon: "bx bxl-css3", color: "#264DE4" },
       { name: "JavaScript", icon: "bx bxl-javascript", color: "#F7DF1E" },
       { name: "React", icon: "bx bxl-react", color: "#61DAFB" },
-      { name: "Vue", icon: "bx bxl-vuejs", color: "#4FC08D" },
+      { name: "Angular", icon: "bx bxl-angular", color: "#c50836" },
       { name: "Tailwind", icon: "bx bxl-tailwind-css", color: "#06B6D4" },
       { name: "TypeScript", icon: "bx bxl-typescript", color: "#3178C6" },
     ],
     backend: [
-      { name: "Node.js", icon: "bx bxl-nodejs", color: "#339933" },
-      { name: "Express", icon: "bx bx-server", color: "#000000" },
-      { name: "MongoDB", icon: "bx bxl-mongodb", color: "#47A248" },
+      { name: "Java", icon: "bx bxl-java", color: "#339933" },
+      { name: "Python", icon: "bx bxl-python", color: "#000000" },
       { name: "PostgreSQL", icon: "bx bxl-postgresql", color: "#336791" },
-      { name: "Firebase", icon: "bx bxl-firebase", color: "#FFCA28" },
+
     ],
     tools: [
       { name: "Git", icon: "bx bxl-git", color: "#F05032" },
       { name: "GitHub", icon: "bx bxl-github", color: "#181717" },
-      { name: "VS Code", icon: "bx bxl-visual-studio", color: "#007ACC" },
+      { name: "Illustrator", icon: " bx-illustrator", color: "#007ACC" },
       { name: "Figma", icon: "bx bxl-figma", color: "#F24E1E" },
-      { name: "Docker", icon: "bx bxl-docker", color: "#2496ED" },
+      { name: "Photoshop", icon: "bx bx-photoshop", color: "#2496ED" },
     ],
   }
 
