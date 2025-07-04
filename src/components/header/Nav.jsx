@@ -123,6 +123,10 @@ const Nav = () => {
                 <motion.a
                     href="#hero"
                     className="group flex items-center gap-2"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleNavLinkClick('#hero');
+                    }}
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                 >

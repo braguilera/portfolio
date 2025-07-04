@@ -1,60 +1,32 @@
+// src/components/SocialIconButton.js
+
 import React from "react";
 import { motion } from 'framer-motion';
 
-const SocialIconButton = ({ icon: Icon, position, url, index, radius, isMobile, colorPalette }) => {
-  const getPositions = () => {
-    const adjustedRadius = isMobile ? radius * 0.85 : radius;
-    
-    return {
-      top: { y: -adjustedRadius },
-      right: { x: adjustedRadius },
-      bottom: { y: adjustedRadius },
-      left: { x: -adjustedRadius }
-    };
-  };
+const SocialIconButton = ({ icon: Icon, position, url, index, radius }) => {
+  const getPositions = () => ({
+    top: { y: -radius },
+    right: { x: radius },
+    bottom: { y: radius },
+    left: { x: -radius }
+  });
 
   const positions = getPositions();
 
   const variants = {
-    hidden: { 
-      opacity: 0,
-      scale: 0.5,
-      x: 0,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15,
-        delay: index * 0.1
-      }
-    },
+    hidden: { opacity: 0, scale: 0.5, x: 0, y: 0 },
     visible: {
       opacity: 1,
       scale: 1,
       ...positions[position],
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15,
-        delay: index * 0.06
-      }
+      transition: { type: "spring", stiffness: 220, damping: 18, delay: index * 0.05 }
     },
     exit: {
       opacity: 0,
       scale: 0.5,
       x: 0,
       y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15,
-        delay: index * 0.03
-      }
-    },
-    hover: {
-      scale: 1.1,
-      boxShadow: "0 8px 15px -3px rgba(147, 51, 234, 0.3)",
-      transition: { type: "spring", stiffness: 400 }
+      transition: { type: "spring", stiffness: 220, damping: 18, delay: index * 0.03 }
     }
   };
 
@@ -63,20 +35,27 @@ const SocialIconButton = ({ icon: Icon, position, url, index, radius, isMobile, 
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="absolute w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-white shadow-md flex items-center justify-center text-purple-600 hover:text-purple-800 border border-purple-100 left-2 top-2 md:left-1 md:top-1"
-      style={{
-        background: colorPalette?.background || "white",
-        borderColor: colorPalette?.border || "rgba(210, 190, 230, 0.5)",
-        color: colorPalette?.text || "rgb(101, 62, 148)"
-      }}
+      // TAMAÑOS RESTAURADOS + NUEVO ESTILO:
+      className="absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full cursor-pointer flex items-center justify-center text-purple-700 bg-white/80 backdrop-blur-lg border-2 border-purple-200/80 shadow-md shadow-purple-200/50"
       variants={variants}
       initial="hidden"
       animate="visible"
       exit="exit"
-      whileHover="hover"
-      whileTap={{ scale: 0.9 }}
+      whileHover={{
+        scale: 1.15,
+        backgroundColor: "rgb(250, 250, 250)",
+        borderColor: "rgba(192, 132, 252, 0.9)",
+        boxShadow: "0px 5px 20px -5px rgba(160, 100, 220, 0.5)",
+        transition: { type: 'spring', stiffness: 350 }
+      }}
+      whileTap={{
+        scale: 0.9,
+        backgroundColor: "rgb(230, 220, 240)",
+        transition: { type: "spring", stiffness: 400, damping: 15 }
+      }}
     >
-      <Icon className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+      {/* TAMAÑO DE ICONO RESTAURADO */}
+      <Icon className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth="2.3" />
     </motion.a>
   );
 };

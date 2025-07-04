@@ -1,4 +1,22 @@
 [
+    {
+    "title": "Landing Page para Teich Logística",
+    "company": "Freelance",
+    "date": "Mayo 2025 - Junio 2025",
+    "description": "Diseño y desarrollo de una landing page profesional para Teich Logística, empresa especializada en soluciones logísticas para las industrias petrolera y minera. El sitio incluye formulario de contacto, soporte para 4 idiomas, diseño responsive, animaciones fluidas y mejoras visuales centradas en accesibilidad y experiencia de usuario. El enfoque fue comunicar solidez, tecnología y seguridad operativa.",
+    "technologies": ["React", "Tailwind", "Framer Motion", "JavaScript"],
+    "demoUrl": "https://teichlog.com/",
+    "backgroundImage": "/api/placeholder/400/250"
+  },
+  {
+    "title": "Landing Page Institucional para EMSA",
+    "company": "Freelance",
+    "date": "Mayo 2025 - Junio 2025",
+    "description": "Desarrollo de una landing page institucional para EMSA, empresa de servicios logísticos integrados. La página presenta los valores, servicios y enfoque de la marca en logística estratégica. Implementé diseño responsive, soporte multilenguaje (4 idiomas), animaciones suaves y mejoras de UX/UI sobre el diseño original en Figma. El proyecto se enfocó en transmitir confiabilidad y eficiencia con una experiencia visual moderna.",
+    "technologies": ["React", "Tailwind", "Framer Motion", "JavaScript"],
+    "demoUrl": "https://emsalog.com/",
+    "backgroundImage": "/api/placeholder/400/250"
+  },
   {
     "title": "Of Course: Clases fitness",
     "company": "Freelance",
