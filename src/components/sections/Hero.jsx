@@ -45,6 +45,16 @@ const Hero = () => {
     },
   ]
   
+  const handleNavLinkClick = (href) => {
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <div id="hero" className="h-[90vh] w-screen flex justify-center relative px-8 py-4 text-slate-700">
       <GeometricShapes />
@@ -130,11 +140,20 @@ const Hero = () => {
               }}
             >
 
+            <a 
+              href="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavLinkClick("#projects");
+              }}  
+            >
               <img
                 src={BraianImg}
                 alt="Braian Alejandro Aguilera"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center cursor-pointer"
               />
+            </a>
+
 
               <motion.div
                 className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-40 w-full"

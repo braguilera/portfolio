@@ -1,5 +1,14 @@
 [
-    {
+  {
+    "title": "Landing Page Corporativa para Quadrant",
+    "company": "Freelance",
+    "date": "Julio 2025 - Septiembre 2025",
+    "description": "Diseño y desarrollo integral de la landing page corporativa para Quadrant, una empresa de software (SaaS) especializada en soluciones para el sector logístico. El proyecto abarcó desde la conceptualización de la UI/UX hasta la implementación final, basándose en el manual de estilo de la empresa para crear una identidad visual cohesiva y profesional.",
+    "technologies": ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],
+    "demoUrl": "https://www.quadrant.com.ar/",
+    "backgroundImage": "/api/placeholder/400/250"
+  },
+  {
     "title": "Landing Page para Teich Logística",
     "company": "Freelance",
     "date": "Mayo 2025 - Junio 2025",
